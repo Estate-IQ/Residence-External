@@ -6,7 +6,10 @@ export const SVGs = {
   brand_name: require("../svg/brand_name.svg").default,
   brand_logo: require("../svg/brand_logo.svg").default,
   delete: require("../svg/delete.svg").default,
+  delete: require("../svg/delete.svg").default,
   email: require("../svg/location.svg").default,
+  GooglePlay: require("../svg/AppStore.svg").default,
+  AppStore: require("../svg/GooglePlay.svg").default,
   Fire: require("../svg/FireFighters.svg").default,
   FrameImg: require("../svg/img_frame.svg").default,
   TransactionResidenceSvg: require("../svg/transactionResidenceSvg.svg")

@@ -8,7 +8,17 @@
   list-style-type: none;
   -webkit-tap-highlight-color: transparent;
 }
-
+.webContainer {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media (max-width: 540px) {
+    padding: 0 20px;
+  }
+}
+.handleNavbar {
+  font-family: var(--Satoshi) !important;
+}
 #messagesBg {
   position: relative;
   &:before {
@@ -563,6 +573,7 @@ button {
 }
 .outlined-btn {
   @include button;
+  padding: 10px 20px;
   background-color: var(--White);
   color: var(--Brand-color);
   border: 2px solid var(--Brand-color);

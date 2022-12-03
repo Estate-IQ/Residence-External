@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/style.css";
 import "./assets/css/estate.css";
 
+// WEBSITES
+import Homepage from "./Pages/Website/Home";
+
 // RESIDENT
 import ResidentComplain from "./Pages/Residents/ResidentComplain";
 import ResidentTransaction from "./Pages/Residents/Transaction";
@@ -62,7 +65,7 @@ function App() {
             />
 
             {/* RESIDENT */}
-            <Route index element={<ResidentsOverview />} />
+            <Route index element={<Homepage />} />
             <Route path="/overview" element={<ResidentsOverview />} />
             <Route path="/residence/settings" element={<ExternalSettings />} />
             <Route path="/redirect=token" element={<Redirect />} />

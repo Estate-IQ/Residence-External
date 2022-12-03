@@ -5,6 +5,7 @@ export const Images = {
   img3: require("../images/img3.jpg"),
   img4: require("../images/img4.jpg"),
   img5: require("../images/img5.jpg"),
+  banner: require("../images/banner.png"),
   img6: require("../images/img6.jpg"),
   img7: require("../images/img7.jpg"),
   blog1: require("../images/blog1.jpg"),
