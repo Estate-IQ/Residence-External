@@ -85,8 +85,10 @@ let PageFooter = styled.section`
     margin-top: 70px;
     text-align: center;
     border-top: 1px solid blue;
-
-    padding: 20px;
+    container {
+      padding: 0 !important;
+    }
+    padding: 20px 0;
     span {
       color: #fff;
     }

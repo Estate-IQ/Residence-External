@@ -5,6 +5,7 @@ import "./assets/css/estate.css";
 
 // WEBSITES
 import Homepage from "./Pages/Website/Home";
+import AboutUs from "./Pages/Website/AboutUs";
 
 // RESIDENT
 import ResidentComplain from "./Pages/Residents/ResidentComplain";
@@ -64,10 +65,14 @@ function App() {
               element={<ExternalActivityLog />}
             />
 
+            {/* Website*/}
+            <Route path="/about" element={<AboutUs />} />
+            {/* <Route path="/about" element={<AboutUs />} /> */}
+
             {/* RESIDENT */}
             <Route index element={<Homepage />} />
             <Route path="/overview" element={<ResidentsOverview />} />
-            <Route path="/residence/settings" element={<ExternalSettings />} />
+            <Route path="/residence/settings" element={<RedirectSettings />} />
             <Route path="/redirect=token" element={<Redirect />} />
             <Route path="/resident/complaint" element={<ResidentComplain />} />
             <Route path="/resident/residence" element={<Residents />} />

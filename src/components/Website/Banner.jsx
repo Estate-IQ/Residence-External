@@ -9,8 +9,9 @@ const Banner = () => {
         <div className="grade">
           <div className="phrase">
             <h1>
-              Living can be a lot <span>simpler</span> and
-              <span> intuitive</span>
+              Living can be a lot{" "}
+              <span className="tracking-in-contract">simpler</span> and
+              <span className="tracking-in-contract"> intuitive</span>
             </h1>
             <p>For Estate Managers & Residents within Gated Communities</p>
           </div>
@@ -69,10 +70,14 @@ let PageBanner = styled.section`
         }
       }
       .forTransition {
-        width: 460px;
+        width: 100%;
         height: 460px;
-
         overflow: hidden;
+        @media (max-width: 1024px) {
+          margin-top: 50px;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -84,8 +89,11 @@ let PageBanner = styled.section`
       letter-spacing: -0.06em;
       text-align: left;
       @media (max-width: 450px) {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 50px;
+        line-height: 67px;
+        span {
+          font-size: 52px !important;
+        }
       }
       span {
         font-family: DM Sans;
