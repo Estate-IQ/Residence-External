@@ -15,8 +15,8 @@ const Home = () => {
       <TopNav />
       <Banner />
       <YellowBg>
-        <BuildLife />
-        <Features />
+        <BuildLife id="Benefits" />
+        <Features id="Features" />
       </YellowBg>
       <BlueBg>
         <Benefits />

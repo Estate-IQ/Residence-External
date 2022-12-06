@@ -1,28 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import AboutBanner from "../../components/Website/AboutBanner";
-import AboutQuote from "../../components/Website/AboutQuote";
+import ContactForm from "../../components/Website/ContactForm";
+
 import Footer from "../../components/Website/Footer";
 import SubscribeWaitList from "../../components/Website/SubscribeWaitList";
-import TheTeam from "../../components/Website/TheTeam";
 import TopNav from "../../components/Website/TopNav";
 
-const AboutUs = () => {
+const Contact = () => {
   return (
-    <AboutPage>
+    <ContactPage>
       <TopNav />
-      <AboutBanner />
-      <AboutQuote />
-      <TheTeam id="Team" />
+      <ContactForm />
       <SubscribeWaitList />
       <Footer />
-    </AboutPage>
+    </ContactPage>
   );
 };
 
-export default AboutUs;
+export default Contact;
 
-let AboutPage = styled.section`
+let ContactPage = styled.section`
   button {
     transform: scale(1);
     transition: 0.4s;

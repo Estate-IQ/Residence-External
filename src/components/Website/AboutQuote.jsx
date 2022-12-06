@@ -12,10 +12,10 @@ const AboutQuote = () => {
           </div>
           <div className="cloneWith img_side">
             <div className="handleText">
-              <h5>
+              <h4>
                 One is <span> too small</span> a number to achieve
                 <span>greatness…</span>
-              </h5>
+              </h4>
               <p>John C. Maxwell</p>
             </div>
           </div>
@@ -34,17 +34,19 @@ let HandleBg = styled.section`
 let HandleQuote = styled.div`
   .handleText {
     margin-top: 30px;
+
     p {
+      margin-top: 30px;
       font-size: 24px;
       font-weight: 700;
       line-height: 36px;
       letter-spacing: 0em;
       color: rgba(23, 55, 229, 1);
-      text-align: center;
+      text-align: left;
     }
-    h5 {
+    h4 {
       padding-top: 20px;
-      padding-left: 10px;
+
       font-size: 64px;
       font-weight: 700;
       line-height: 77px;
@@ -52,11 +54,24 @@ let HandleQuote = styled.div`
       text-align: left;
       span {
         font-size: 64px;
+        display: inline-block;
         font-weight: 700;
-        line-height: 77px;
+
         letter-spacing: -0.06em;
         text-align: left;
         color: rgba(234, 203, 48, 1);
+      }
+    }
+    @media (max-width: 540px) {
+      p {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 50px !important;
+        line-height: 60px;
+        span {
+          font-size: 50px !important;
+        }
       }
     }
   }

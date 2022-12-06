@@ -5,7 +5,7 @@ export const Images = {
   img3: require("../images/img3.jpg"),
   img4: require("../images/img4.jpg"),
   img5: require("../images/img5.jpg"),
-  banner: require("../images/banner.png"),
+  banner: require("../images/banner.jpg"),
   Enable: require("../images/Enable.png"),
   App: require("../images/app.png"),
   chartFrame: require("../images/chartFrame.png"),

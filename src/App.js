@@ -6,6 +6,7 @@ import "./assets/css/estate.css";
 // WEBSITES
 import Homepage from "./Pages/Website/Home";
 import AboutUs from "./Pages/Website/AboutUs";
+import ContactUs from "./Pages/Website/Contact";
 
 // RESIDENT
 import ResidentComplain from "./Pages/Residents/ResidentComplain";
@@ -67,6 +68,7 @@ function App() {
 
             {/* Website*/}
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
             {/* <Route path="/about" element={<AboutUs />} /> */}
 
             {/* RESIDENT */}

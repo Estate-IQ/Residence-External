@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
+import { BrowserRouter } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const TopNav = () => {
   const [open, setOpen] = useState("houseForTwo");
@@ -12,6 +14,7 @@ const TopNav = () => {
       : setOpen("houseForTwo");
   };
   return (
+    // <BrowserRouter>
     <Navbar>
       <section className="navbar">
         <div className="webContainer">
@@ -22,19 +25,29 @@ const TopNav = () => {
             <div className={open}>
               <ul className="navLinks">
                 <li className="callDrop">
-                  About
+                  <Link to="/about"> About</Link>
                   <ul className="dropdownCalled">
-                    <li>Who We are</li>
-                    <li>Our Team </li>
-                    <li>Decisions and Directors</li>
-                    <li>Career</li>
-                    <li>Our Partners</li>
+                    <Link to="/about">
+                      <li>Who We are</li>
+                    </Link>
+                    <HashLink to="#Team" smooth>
+                      <li>Our Team </li>
+                    </HashLink>
+
+                    {/* <li>Decisions and Directors</li> */}
+                    {/* <li>Career</li> */}
+                    {/* <li>Our Partners</li> */}
                   </ul>
                 </li>
-
-                <li>Benefits</li>
-                <li>Features</li>
-                <li>Contact Us</li>
+                <HashLink to="#Benefits" smooth>
+                  <li>Benefits</li>
+                </HashLink>
+                <HashLink to="#Features" smooth>
+                  <li>Features</li>
+                </HashLink>
+                <Link to="/contact">
+                  <li>Contact Us</li>
+                </Link>
               </ul>
 
               <div className="scheduleDemo">
@@ -52,6 +65,7 @@ const TopNav = () => {
         </div>
       </section>
     </Navbar>
+    // </BrowserRouter>
   );
 };
 
