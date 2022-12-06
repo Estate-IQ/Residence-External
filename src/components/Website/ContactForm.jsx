@@ -3,19 +3,21 @@ import styled from "styled-components";
 
 const ContactForm = () => {
   return (
-    <Contact className="container">
-      <div className="mainForm">
-        <h1>Contact Us</h1>
+    <section className="webContainer">
+      <Contact>
+        <div className="mainForm">
+          <h1>Contact Us</h1>
 
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="email" placeholder="Email" required />
-        <textarea name="" placeholder="Message"></textarea>
-        <button type="submit" className="important-btn">
-          Send
-        </button>
-      </div>
-    </Contact>
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+          <input type="email" placeholder="Email" required />
+          <textarea name="" placeholder="Message"></textarea>
+          <button type="submit" className="important-btn">
+            Send
+          </button>
+        </div>
+      </Contact>
+    </section>
   );
 };
 
@@ -23,6 +25,7 @@ export default ContactForm;
 
 let Contact = styled.form`
   border: 1.5px solid #999999;
+  margin: 0 auto;
   margin-top: 150px;
   max-width: 700px;
   border-radius: 5px;

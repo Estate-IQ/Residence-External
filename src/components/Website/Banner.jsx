@@ -9,9 +9,9 @@ const Banner = () => {
         <div className="grade">
           <div className="phrase">
             <h1>
-              Living can be a lot{" "}
-              <span className="tracking-in-contract">simpler</span> and
-              <span className="tracking-in-contract"> intuitive</span>
+              Living can be a lot <span className="fade-in-bck">simpler</span>{" "}
+              and
+              <span className="fade-in-bck"> intuitive</span>
             </h1>
             <p>For Estate Managers & Residents within Gated Communities</p>
           </div>

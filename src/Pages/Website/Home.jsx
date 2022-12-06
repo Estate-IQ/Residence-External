@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollToTop from "../../components/ScrollToTop";
 import Banner from "../../components/Website/Banner";
 import Benefits from "../../components/Website/Benefits";
 import BuildLife from "../../components/Website/BuildLife";
@@ -10,9 +11,12 @@ import Testimonial from "../../components/Website/Testimonial";
 import TopNav from "../../components/Website/TopNav";
 
 const Home = () => {
+  ScrollToTop();
+
   return (
     <Homepage>
       <TopNav />
+
       <Banner />
       <YellowBg>
         <BuildLife id="Benefits" />

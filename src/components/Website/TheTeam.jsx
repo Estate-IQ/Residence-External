@@ -22,20 +22,20 @@ const TheTeam = () => {
 
         <div className="mainTeams">
           <div className="eachTeam">
-            <img src={Images.img1} alt="" />
+            <img src={Images.Olaitan} alt="" />
             <div className="nameBank">
-              <h4>Makinde Sodiq Abiodun</h4>
-              <p>Web Designer</p>
+              <h4>Olaitan Oludare</h4>
+              <p>Co-founder & CEO</p>
             </div>
           </div>
           <div className="eachTeam">
-            <img src={Images.img6} alt="" />
+            <img src={Images.oyedotun} alt="" />
             <div className="nameBank">
-              <h4>Makinde Sodiq Abiodun</h4>
-              <p>Web Designer</p>
+              <h4>Aderolake Oyedotun</h4>
+              <p>People Matters</p>
             </div>
           </div>
-          <div className="eachTeam">
+          {/* <div className="eachTeam">
             <img src={Images.img3} alt="" />
             <div className="nameBank">
               <h4>Makinde Sodiq Abiodun</h4>
@@ -55,7 +55,7 @@ const TheTeam = () => {
               <h4>Makinde Sodiq Abiodun</h4>
               <p>Web Designer</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Teams>
@@ -88,7 +88,7 @@ let Teams = styled.section`
           font-size: 20px;
           line-height: 24px;
           display: flex;
-          align-items: center;
+
           color: #f6f6f6;
         }
         p {
@@ -103,9 +103,10 @@ let Teams = styled.section`
     }
     @media (min-width: 700px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
       .eachTeam {
+        margin: 20px 7px;
         width: 48%;
       }
     }
@@ -117,7 +118,7 @@ let Teams = styled.section`
     }
     @media (min-width: 1100px) {
       .eachTeam {
-        width: 24%;
+        width: 23.5%;
       }
     }
   }

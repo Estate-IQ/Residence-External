@@ -6,6 +6,8 @@ export const Images = {
   img4: require("../images/img4.jpg"),
   img5: require("../images/img5.jpg"),
   banner: require("../images/banner.jpg"),
+  oyedotun: require("../images/oyedotun.jpeg"),
+  Olaitan: require("../images/olaitan.jpeg"),
   Enable: require("../images/Enable.png"),
   App: require("../images/app.png"),
   chartFrame: require("../images/chartFrame.png"),
