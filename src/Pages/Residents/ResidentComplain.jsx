@@ -119,10 +119,7 @@ function ResidentComplain() {
                     className={`tab ${checkActive(2, "active")}`}
                     onClick={() => handleClick(2)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Pending")}
-                    >
+                    <button onClick={() => filterEvents("Pending")}>
                       Pending
                     </button>
                   </span>
@@ -130,10 +127,7 @@ function ResidentComplain() {
                     className={`tab ${checkActive(3, "active")}`}
                     onClick={() => handleClick(3)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Resolved")}
-                    >
+                    <button onClick={() => filterEvents("Resolved")}>
                       Resolved
                     </button>
                   </span>

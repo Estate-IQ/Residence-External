@@ -36,19 +36,19 @@ const ExternalSettings = () => {
                     className={`tab ${checkActive(2, "active")}`}
                     onClick={() => handleClick(2)}
                   >
-                    <button className="btn">Email</button>
+                    <button>Email</button>
                   </span>
                   <span
                     className={`tab ${checkActive(3, "active")}`}
                     onClick={() => handleClick(3)}
                   >
-                    <button className="btn">Password</button>
+                    <button>Password</button>
                   </span>
                   <span
                     className={`tab ${checkActive(4, "active")}`}
                     onClick={() => handleClick(4)}
                   >
-                    <button className="btn">Notification</button>
+                    <button>Notification</button>
                   </span>
                 </div>
               </HandleSearchAndTab>

@@ -35,13 +35,13 @@ const Overview_card = () => {
         img={SVGs.overview_svg}
         type="Domestic Staff"
         count="14"
-        link="/superadmin-estate"
+        link="/superadmin/estate"
       />
       <PerOverview
         img={SVGs.complains}
         type="Complaints"
         count="2"
-        link="/superadmin-complaint"
+        link="/superadmin/complaint"
       />
       <PerOverview img={SVGs.vendor} type="Temp Access" count="9" />
     </div>
