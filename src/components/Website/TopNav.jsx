@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
-import { BrowserRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const TopNav = () => {
