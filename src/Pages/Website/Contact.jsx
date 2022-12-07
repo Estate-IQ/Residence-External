@@ -60,7 +60,9 @@ const Contact = () => {
                 </ul>
 
                 <div className="scheduleDemo">
-                  <button className="outlined-btn">Sign In</button>
+                  <Link to="/login">
+                    <button className="outlined-btn">Sign In</button>
+                  </Link>
                   <button className="scheduleButton">Schedule Demo</button>
                 </div>
               </div>

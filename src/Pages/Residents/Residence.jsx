@@ -136,12 +136,7 @@ function ResidencesView() {
                     className={`tab ${checkActive(2, "active")}`}
                     onClick={() => handleClick(2)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Staff")}
-                    >
-                      Staff
-                    </button>
+                    <button onClick={() => filterEvents("Staff")}>Staff</button>
                   </span>
                 </div>
                 <div className="event-input">

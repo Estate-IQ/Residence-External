@@ -40,7 +40,7 @@ import SuperAdminEstate from "./Pages/SuperAdmin/Estates/Estate";
 import SuperAdminTask from "./Pages/SuperAdmin/Tasks/Task";
 import SuperAdminPermission from "./Pages/SuperAdmin/Permissions/Permission";
 // import SuperAdminComplaint from "./Pages/SuperAdmin/Complaints/Complaint";
-import SuperAdminComplaint from "./Pages/SuperAdmin/Complaints/R-Complaint";
+import SuperAdminComplaint from "./Pages/SuperAdmin/Complaints/SuperAdminComplaint";
 
 function App() {
   const [loading, setLoading] = useState(true);

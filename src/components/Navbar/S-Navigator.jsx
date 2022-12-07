@@ -15,7 +15,7 @@ const DesktopTab = (props) => {
         </div>
 
         <img src={SVGs.brand_logo} alt="Estate IQ" className="for_phone" />
-        <Link to="/">
+        <Link to="/superadmin">
           <div id="option" className={props.overview}>
             <div>
               <svg

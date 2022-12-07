@@ -158,10 +158,7 @@ function AdminActivityLog() {
                     className={`tab ${checkActive(2, "active")}`}
                     onClick={() => handleClick(2)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Resident")}
-                    >
+                    <button onClick={() => filterEvents("Resident")}>
                       Residents
                     </button>
                   </span>
@@ -169,10 +166,7 @@ function AdminActivityLog() {
                     className={`tab ${checkActive(3, "active")}`}
                     onClick={() => handleClick(3)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Visitor")}
-                    >
+                    <button onClick={() => filterEvents("Visitor")}>
                       Visitors
                     </button>
                   </span>

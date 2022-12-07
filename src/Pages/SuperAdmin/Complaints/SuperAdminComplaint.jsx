@@ -6,7 +6,7 @@ import Mobile from "../../../components/Navbar/Navbar";
 import TopNav from "../../../components/Navbar/SuperAdminNav";
 import { Link } from "react-router-dom";
 
-function AdminComplains() {
+function SuperAdminComplaint() {
   const [events, setEvents] = useState(API.slice(0, 20));
   const [value, setvalue] = useState("");
 
@@ -117,7 +117,7 @@ function AdminComplains() {
                     onClick={() => handleClick(2)}
                   >
                     <button
-                      className="btn"
+                      className=""
                       onClick={() => filterEvents("Pending")}
                     >
                       Pending
@@ -128,7 +128,7 @@ function AdminComplains() {
                     onClick={() => handleClick(3)}
                   >
                     <button
-                      className="btn"
+                      className=""
                       onClick={() => filterEvents("Resolved")}
                     >
                       Resolved
@@ -196,7 +196,7 @@ function AdminComplains() {
   );
 }
 
-export default AdminComplains;
+export default SuperAdminComplaint;
 
 const Action = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);

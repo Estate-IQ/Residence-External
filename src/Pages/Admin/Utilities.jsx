@@ -73,7 +73,7 @@ function AdminUtility() {
                 </p>
               </div>
             </div>
-            <div className="btn">
+            <div>
               <span className="edit-btn" onClick={() => setEditUtility(true)}>
                 Edit
               </span>

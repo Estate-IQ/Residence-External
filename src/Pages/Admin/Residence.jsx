@@ -178,10 +178,7 @@ function AdminResidence() {
                     className={`tab ${checkActive(2, "active")}`}
                     onClick={() => handleClick(2)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Vendors")}
-                    >
+                    <button onClick={() => filterEvents("Vendors")}>
                       Vendors
                     </button>
                   </span>
@@ -189,10 +186,7 @@ function AdminResidence() {
                     className={`tab ${checkActive(3, "active")}`}
                     onClick={() => handleClick(3)}
                   >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Security")}
-                    >
+                    <button onClick={() => filterEvents("Security")}>
                       Security
                     </button>
                   </span>
