@@ -118,7 +118,11 @@ const ChooseMode = () => {
         </div>
       </div>
       <div className="create_img">
-        <img src={Images.LoginPreview} alt="" />
+        <img
+          src="https://media.istockphoto.com/id/1078415904/photo/modern-new-apartment-house-copy-space-blue-sky-clouds.jpg?s=170667a&w=0&k=20&c=ZGCJ_wMTqu9nCtCNNzVm5scX5xAkAD2WNlMGwQJqJkM="
+          alt=""
+        />
+        {/* <img src={Images.LoginPreview} alt="" /> */}
       </div>
     </div>
   );

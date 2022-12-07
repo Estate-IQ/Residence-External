@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
 
@@ -65,7 +66,9 @@ const Features = () => {
         </div>
       </div>
       <div className="btn_mid">
-        <button className="important-btn">Get Started</button>
+        <Link to="/get-started">
+          <button className="important-btn">Get Started</button>
+        </Link>
       </div>
     </PageFeatures>
   );
