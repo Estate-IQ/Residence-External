@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
 
@@ -17,7 +18,9 @@ const Banner = () => {
           </div>
 
           <div className="ctaButtons">
-            <button className="important-btn">Get Started</button>
+            <Link to="/get-started">
+              <button className="important-btn">Get Started</button>
+            </Link>
             <button className="outlined-btn">Schedule Demo</button>
           </div>
         </div>

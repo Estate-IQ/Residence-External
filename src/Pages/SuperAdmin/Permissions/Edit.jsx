@@ -51,7 +51,7 @@ const EditEachPackage = () => {
               <Update>
                 <BreadCrumb
                   previous="Permission"
-                  prevlink="/superadmin-permission"
+                  prevlink="/superadmin/permission"
                   current="Package Details"
                 />
 

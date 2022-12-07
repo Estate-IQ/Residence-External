@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
 
@@ -45,7 +46,9 @@ const Benefits = () => {
             </p>
           </div>
 
-          <button className="important-btn">Get Started</button>
+          <Link to="/get-started">
+            <button className="important-btn">Get Started</button>
+          </Link>
         </div>
 
         {/* SECTION */}

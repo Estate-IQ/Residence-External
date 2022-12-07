@@ -34,7 +34,7 @@ const Overview_card = () => {
         img={SVGs.overview_svg}
         type="Estates"
         count="14"
-        link="/superadmin-estate"
+        link="/superadmin/estate"
       />
       <PerOverview img={SVGs.Resident} type="Residents" count="62" />
       <PerOverview img={SVGs.vendor} type="Vendors" count="9" />
@@ -42,7 +42,7 @@ const Overview_card = () => {
         img={SVGs.complains}
         type="Complaints"
         count="2"
-        link="/superadmin-complaint"
+        link="/superadmin/complaint"
       />
     </div>
   );

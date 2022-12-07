@@ -36,7 +36,7 @@ const DesktopTab = (props) => {
             </div>
           </div>
         </Link>
-        <Link to="/superadmin-estate">
+        <Link to="/superadmin/estate">
           <div id="option" className={props.estate}>
             <div>
               <svg
@@ -78,7 +78,7 @@ const DesktopTab = (props) => {
             </div>
           </div>
         </Link>
-        <Link to="/superadmin-tasks">
+        <Link to="/superadmin/tasks">
           <div id="option" className={props.task}>
             <div>
               <svg
@@ -99,7 +99,7 @@ const DesktopTab = (props) => {
             </div>
           </div>
         </Link>
-        <Link to="/superadmin-permission">
+        <Link to="/superadmin/permission">
           <div id="option" className={props.permit}>
             <div>
               <svg
@@ -120,7 +120,7 @@ const DesktopTab = (props) => {
             </div>
           </div>
         </Link>
-        <Link to="/superadmin-complaint">
+        <Link to="/superadmin/complaint">
           <div id="option" className={props.complain}>
             <div>
               <svg

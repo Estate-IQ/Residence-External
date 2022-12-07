@@ -35,7 +35,7 @@ class MasterForm extends React.Component {
     });
 
     // .then(function () {
-    //   window.location = "/superadmin-tasks";
+    //   window.location = "/superadmin/tasks";
     // });
   };
 

@@ -27,7 +27,7 @@ const Profile = () => {
           <div className="dashboard_container">
             <BreadCrumb
               previous="Estate"
-              prevlink="/superadmin-estate"
+              prevlink="/superadmin/estate"
               current="Estate Info"
             />
             <div className="group_profile">

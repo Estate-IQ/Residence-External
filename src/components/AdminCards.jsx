@@ -35,7 +35,7 @@ const Overview_card = () => {
         img={SVGs.overview_svg}
         type="Residents"
         count="14"
-        // link="/superadmin-estate"
+        // link="/superadmin/estate"
       />
 
       <PerOverview img={SVGs.Resident} type="Security" count="6" />

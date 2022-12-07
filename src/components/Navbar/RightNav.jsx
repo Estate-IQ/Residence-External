@@ -69,19 +69,19 @@ const RightNav = ({ open }) => {
         <Link to="/">
           <li className="before_list over_view">Overview</li>
         </Link>
-        <Link to="/superadmin-estate">
+        <Link to="/superadmin/estate">
           <li className="before_list est">Estates</li>
         </Link>
         <Link to="" style={{ opacity: "0.4" }}>
           <li className="before_list msg">Messages</li>
         </Link>
-        <Link to="/superadmin-tasks">
+        <Link to="/superadmin/tasks">
           <li className="before_list tsk">Task</li>
         </Link>
-        <Link to="/superadmin-permission">
+        <Link to="/superadmin/permission">
           <li className="before_list psm">Permission</li>
         </Link>
-        <Link to="/superadmin-complaint">
+        <Link to="/superadmin/complaint">
           <li className="before_list comp">Complaints</li>
         </Link>
 

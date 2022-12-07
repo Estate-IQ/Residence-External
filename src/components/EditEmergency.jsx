@@ -16,7 +16,7 @@ const handleSubmit = (event) => {
   });
 
   // .then(function () {
-  //   window.location = "/superadmin-tasks";
+  //   window.location = "/superadmin/tasks";
   // });
 };
 
