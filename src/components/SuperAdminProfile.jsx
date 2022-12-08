@@ -100,7 +100,7 @@ class SuperAdminForm extends React.Component {
           defaultValue="Banna Island Estate"
         />
         <div className="residentid">
-          <h4>Residence ID</h4>
+          <h4>Residents ID</h4>
           <p>#EDSVXBN</p>
         </div>
 

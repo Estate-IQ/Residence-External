@@ -5,7 +5,7 @@ import { Images } from "../../assets/images/Images";
 
 const Benefits = () => {
   return (
-    <PageBenefits className="webContainer">
+    <PageBenefits className="webContainer" id="Benefits">
       <div className="handleDisplay">
         <img src={Images.Enable} alt="Benefits" className="ff_part" />
         <div className="benefits">

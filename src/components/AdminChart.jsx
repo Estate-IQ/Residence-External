@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { ResponsiveContainer } from "recharts";
 import styled from "styled-components";
 
-const LatestResidence = () => {
+const LatestResidents = () => {
   const [selected, setSelected] = useState("Action");
   const PerNewEstate = (props) => {
     return (
@@ -47,8 +47,8 @@ const LatestResidence = () => {
 
       <div className="latest_estate">
         <div className="ff_heading">
-          <h4>Newest Residence</h4>
-          <Link to="/admin/residence">See more</Link>
+          <h4>Newest Residents</h4>
+          <Link to="/admin/household">See more</Link>
         </div>
         <PerNewEstate
           estateimg={Images.blog2}
@@ -70,7 +70,7 @@ const LatestResidence = () => {
   );
 };
 
-export default LatestResidence;
+export default LatestResidents;
 
 const Action = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);

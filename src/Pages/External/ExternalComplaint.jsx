@@ -474,7 +474,7 @@ let API = [
     first_name: "Barbette",
     last_name: "Breheny",
     email: "bbreheny3@unc.edu",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
 ];

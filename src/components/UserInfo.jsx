@@ -54,7 +54,7 @@ const ShareAccess = () => {
         </div>
         <div className="eachUnit">
           <p>Access Type</p>
-          <input readOnly type="text" className="unitData" value="Residence " />
+          <input readOnly type="text" className="unitData" value="Residents " />
         </div>
         <div className="eachUnit">
           <p>Destination</p>

@@ -89,7 +89,7 @@ function AdminTransaction() {
           <td className="action_data">
             <div className="img-action">
               <a href="">
-                <img src={SVGs.TransactionResidenceSvg} />
+                <img src={SVGs.TransactionResidentsSvg} />
               </a>
               <div className="action-preview">Preview</div>
             </div>
@@ -314,7 +314,7 @@ const TableFrame = styled.div`
     width: 65%;
   }
 
-  .residence-address {
+  .Residents-address {
     width: 153px;
     height: 34px;
     font-family: "Satoshi";

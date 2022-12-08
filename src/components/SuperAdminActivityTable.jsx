@@ -137,7 +137,7 @@ const AdminTransactionTable = () => {
               className={`tab ${checkActive(2, "active")}`}
               onClick={() => handleClick(2)}
             >
-              <button onClick={() => filterEvents("Resident")}>
+              <button className="btn" onClick={() => filterEvents("Resident")}>
                 Residents
               </button>
             </span>
@@ -145,7 +145,9 @@ const AdminTransactionTable = () => {
               className={`tab ${checkActive(3, "active")}`}
               onClick={() => handleClick(3)}
             >
-              <button onClick={() => filterEvents("Visitor")}>Visitors</button>
+              <button className="btn" onClick={() => filterEvents("Visitor")}>
+                Visitors
+              </button>
             </span>
           </div>
           <div className="event-input">
@@ -172,9 +174,9 @@ const AdminTransactionTable = () => {
           <table>
             <thead>
               <tr>
-                <th>Residence Name</th>
+                <th>Residents Name</th>
                 <th>Email</th>
-                <th>Residence Address</th>
+                <th>Residents Address</th>
                 <th>Date and Time</th>
                 <th>Action</th>
               </tr>

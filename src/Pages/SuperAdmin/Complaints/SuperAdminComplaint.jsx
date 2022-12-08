@@ -12,8 +12,8 @@ function SuperAdminComplaint() {
 
   const [pageNumber, setPageNumber] = useState(0); // state representing the page we are on
   const [searchTerm, setSearchTerm] = useState("");
-  const [openModal, setOpenModal] = useState(false); // state for Modal
-  const [edit, setEdit] = useState(false); // state for Modal
+  // const [openModal, setOpenModal] = useState(false); // state for Modal
+  // const [edit, setEdit] = useState(false); // state for Modal
   const [selected, setSelected] = useState("Filter");
   const [activeIndex, setActiveIndex] = useState(1);
   const handleClick = (index) => setActiveIndex(index);
@@ -175,9 +175,9 @@ function SuperAdminComplaint() {
                 <Wrapper>{displayEvents}</Wrapper>
               </div>
             </div>
-            <Link to="/admin">
+            {/* <Link to="/admin">
               <button className="outlined-btn"> BTN</button>
-            </Link>
+            </Link> */}
             <ReactPaginate
               previousLabel={"<"}
               nextLabel={">"}
@@ -464,7 +464,7 @@ let API = [
     first_name: "Barbette",
     last_name: "Breheny",
     email: "bbreheny3@unc.edu",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -568,7 +568,7 @@ let API = [
     first_name: "Corey",
     last_name: "Hallowell",
     email: "challowellg@dion.ne.jp",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {
@@ -616,7 +616,7 @@ let API = [
     first_name: "Cathy",
     last_name: "Wattisham",
     email: "cwattishamm@tamu.edu",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -648,7 +648,7 @@ let API = [
     first_name: "Veronike",
     last_name: "Andreoletti",
     email: "vandreolettiq@list-manage.com",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -656,7 +656,7 @@ let API = [
     first_name: "Cosette",
     last_name: "Samudio",
     email: "csamudior@mysql.com",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {
@@ -664,7 +664,7 @@ let API = [
     first_name: "Gerty",
     last_name: "Yele",
     email: "gyeles@bandcamp.com",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import EmergencyContactData from "../../admin/emergencyContactList/EmergencyContactData.json";
-// import EmergencyContactData from "../../Residence_tables/activityResidence/EmergencyContactData.json";
+// import EmergencyContactData from "../../Residents_tables/activityResidents/EmergencyContactData.json";
 
 import styled from "styled-components";
 

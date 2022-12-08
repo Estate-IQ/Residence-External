@@ -23,59 +23,8 @@ const Contact = () => {
   };
   return (
     <ContactPage>
-      {/* <TopNav /> */}
-      <Navbar>
-        <section className="navbar">
-          <div className="webContainer">
-            <div className="handleNavbar">
-              <Link to="/">
-                <img src={Images.logo} alt="" />
-              </Link>
-              <div className={open}>
-                <ul className="navLinks">
-                  <li className="callDrop">
-                    <Link to="/about"> About</Link>
-                    <ul className="dropdownCalled">
-                      <Link to="/about">
-                        <li>Who We are</li>
-                      </Link>
-                      <HashLink to="#Team" smooth>
-                        <li>Our Team </li>
-                      </HashLink>
+      <TopNav />
 
-                      {/* <li>Decisions and Directors</li> */}
-                      {/* <li>Career</li> */}
-                      {/* <li>Our Partners</li> */}
-                    </ul>
-                  </li>
-                  <Link to="/" smooth>
-                    <li>Benefits</li>
-                  </Link>
-                  <Link to="/" smooth>
-                    <li>Features</li>
-                  </Link>
-                  <Link to="/contact">
-                    <li>Contact Us</li>
-                  </Link>
-                </ul>
-
-                <div className="scheduleDemo">
-                  <Link to="/login">
-                    <button className="outlined-btn">Sign In</button>
-                  </Link>
-                  <button className="scheduleButton">Schedule Demo</button>
-                </div>
-              </div>
-              <div class="menu-wrap" onClick={HandleMenu}>
-                <input type="checkbox" class="toggler" />
-                <div class="hamburger">
-                  <div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Navbar>
       <ContactForm />
       <SubscribeWaitList />
       <Footer />

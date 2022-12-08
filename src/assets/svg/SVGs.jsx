@@ -11,8 +11,10 @@ export const SVGs = {
   GooglePlay: require("../svg/AppStore.svg").default,
   AppStore: require("../svg/GooglePlay.svg").default,
   Fire: require("../svg/FireFighters.svg").default,
+  visitors: require("../svg/visitors.svg").default,
+
   FrameImg: require("../svg/img_frame.svg").default,
-  TransactionResidenceSvg: require("../svg/transactionResidenceSvg.svg")
+  TransactionResidentsSvg: require("../svg/transactionResidentsSvg.svg")
     .default,
   close: require("../svg/close.svg").default,
   caution: require("../svg/caution.svg").default,

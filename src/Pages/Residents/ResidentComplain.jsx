@@ -475,7 +475,7 @@ let API = [
     first_name: "Barbette",
     last_name: "Breheny",
     email: "bbreheny3@unc.edu",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -579,7 +579,7 @@ let API = [
     first_name: "Corey",
     last_name: "Hallowell",
     email: "challowellg@dion.ne.jp",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {
@@ -627,7 +627,7 @@ let API = [
     first_name: "Cathy",
     last_name: "Wattisham",
     email: "cwattishamm@tamu.edu",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -659,7 +659,7 @@ let API = [
     first_name: "Veronike",
     last_name: "Andreoletti",
     email: "vandreolettiq@list-manage.com",
-    user: "Residence",
+    user: "Residents",
     category: "Resolved",
   },
   {
@@ -667,7 +667,7 @@ let API = [
     first_name: "Cosette",
     last_name: "Samudio",
     email: "csamudior@mysql.com",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {
@@ -675,7 +675,7 @@ let API = [
     first_name: "Gerty",
     last_name: "Yele",
     email: "gyeles@bandcamp.com",
-    user: "Residence",
+    user: "Residents",
     category: "Pending",
   },
   {

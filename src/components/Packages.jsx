@@ -27,7 +27,7 @@ const Packages = () => {
   return (
     <div className="control_package fourcard_grid">
       <EachPackage
-        img={SVGs.freePlan}
+        img={SVGs.standardPlan}
         packageName="Free Plan"
         permissions="9"
         subscriber="23"
@@ -39,13 +39,13 @@ const Packages = () => {
         subscriber="7"
       />
       <EachPackage
-        img={SVGs.standardPlan}
+        img={SVGs.premiumPlan}
         packageName="Standard Plan"
         permissions="22"
         subscriber="5"
       />
       <EachPackage
-        img={SVGs.premiumPlan}
+        img={SVGs.freePlan}
         packageName="Premium Plan"
         permissions="22"
         subscriber="5"

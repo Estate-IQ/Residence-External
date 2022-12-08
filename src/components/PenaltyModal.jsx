@@ -119,18 +119,6 @@ class CreateCollection extends React.Component {
           // action="/profile"
           className="new_estates_form fade-in-bck"
         >
-          {/* <p>Step {this.state.currentStep} of 2</p> */}
-          {/* 
-          <Step1
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            email={this.state.email}
-            firstName={this.state.firstName}
-            lastName={this.state.lastName}
-            password={this.state.password}
-            C_password={this.state.C_password}
-            date={this.state.date}
-          /> */}
           <Step2
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
@@ -172,67 +160,113 @@ function Step2(props) {
         />
         <RevokeAccess>
           <h2>Revoke</h2>
-          <div className="each_access">
-            <div class="cntr">
-              <label for="cbx" class="label-cbx">
-                <input
-                  id="cbx"
-                  name="cbx"
-                  type="checkbox"
-                  class="invisible"
-                  value={props.agree}
-                  onChange={props.agree}
-                />
-                <div class="checkbox">
-                  <svg width="20px" height="20px" viewBox="0 0 20 20">
-                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                    <polyline points="4 11 8 15 16 6"></polyline>
-                  </svg>
-                </div>
-              </label>
-              <span>Gate Pass</span>
+
+          <div className="revokeOnes">
+            <div className="each_access">
+              <div class="cntr">
+                <label for="cbx" class="label-cbx">
+                  <input
+                    id="cbx"
+                    name="cbx"
+                    type="checkbox"
+                    class="invisible"
+                    value={props.agree}
+                    onChange={props.agree}
+                    checked
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Gate Pass</span>
+              </div>
             </div>
-          </div>
-          <div className="each_access">
-            <div class="cntr">
-              <label for="util" class="label-cbx">
-                <input
-                  id="util"
-                  name="util"
-                  type="checkbox"
-                  class="invisible"
-                  value={props.agree}
-                  onChange={props.agree}
-                />
-                <div class="checkbox">
-                  <svg width="20px" height="20px" viewBox="0 0 20 20">
-                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                    <polyline points="4 11 8 15 16 6"></polyline>
-                  </svg>
-                </div>
-              </label>
-              <span>Utility Portal</span>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="util" class="label-cbx">
+                  <input
+                    id="util"
+                    name="util"
+                    type="checkbox"
+                    class="invisible"
+                    value={props.agree}
+                    onChange={props.agree}
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Utility Portal</span>
+              </div>
             </div>
-          </div>
-          <div className="each_access">
-            <div class="cntr">
-              <label for="emergency" class="label-cbx">
-                <input
-                  id="emergency"
-                  name="emergency"
-                  type="checkbox"
-                  class="invisible"
-                  value={props.agree}
-                  onChange={props.agree}
-                />
-                <div class="checkbox">
-                  <svg width="20px" height="20px" viewBox="0 0 20 20">
-                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                    <polyline points="4 11 8 15 16 6"></polyline>
-                  </svg>
-                </div>
-              </label>
-              <span>Emergency services</span>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="emergency" class="label-cbx">
+                  <input
+                    id="emergency"
+                    name="emergency"
+                    type="checkbox"
+                    class="invisible"
+                    value={props.agree}
+                    onChange={props.agree}
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Emergency services</span>
+              </div>
+            </div>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="message" class="label-cbx">
+                  <input
+                    id="message"
+                    name="message"
+                    type="checkbox"
+                    class="invisible"
+                    value={props.agree}
+                    onChange={props.agree}
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>One-to-One Messaging</span>
+              </div>
+            </div>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="parmanentVisitors" class="label-cbx">
+                  <input
+                    id="parmanentVisitors"
+                    name="parmanentVisitors"
+                    type="checkbox"
+                    class="invisible"
+                    value={props.agree}
+                    onChange={props.agree}
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Visitor Management (permanent Guests)</span>
+              </div>
             </div>
           </div>
         </RevokeAccess>
@@ -307,6 +341,10 @@ const Modal = ({ open, onClose }) => {
 export default Modal;
 
 let RevokeAccess = styled.div`
+  .revokeOnes {
+    height: 200px;
+    overflow: auto;
+  }
   h2 {
     font-size: 20px;
     color: red;

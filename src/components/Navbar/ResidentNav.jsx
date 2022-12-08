@@ -139,9 +139,9 @@ const TopNav = () => {
           <div className="user_mode">
             <div>
               <h3>Angelina Jolie Jodan</h3>
-              <p>Residence</p>
+              <p>Residents</p>
             </div>
-            <Link to="/residence/settings">
+            <Link to="/Residents/settings">
               <img
                 src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY="
                 alt=""

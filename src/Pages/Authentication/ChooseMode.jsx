@@ -66,7 +66,7 @@ const ChooseMode = () => {
                     <div className="choose_txt">
                       <h4>Manage Estate</h4>
                       <p>
-                        Sign up as estate admin and onboard residence of your
+                        Sign up as estate admin and onboard Residents of your
                         estate
                       </p>
                     </div>

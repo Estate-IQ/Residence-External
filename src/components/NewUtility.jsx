@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import CollectionType from "./CollectionType";
+import Compulsory from "./Compulsary";
 import Frequency from "./Frequency";
 
 class MasterForm extends React.Component {
@@ -85,6 +87,7 @@ class MasterForm extends React.Component {
 
 function Step2(props) {
   const [selected, setSelected] = useState("Payment Frequency");
+  const [collection, setCollection] = useState("Collection Type");
   if (props.currentStep !== 1) {
     return null;
   }
@@ -107,15 +110,44 @@ function Step2(props) {
           name="cost"
           placeholder="Utility Cost"
         />
+
         <input
-          type="date"
-          placeholder="Payment Due Date"
-          id="date"
-          value={props.date}
+          type="text"
+          id="bank"
+          value={props.bank}
           onChange={props.handleChange}
-          name="date"
+          name="bank"
+          placeholder="Bank Name"
         />
+        <input
+          type="text"
+          id="accountName"
+          value={props.accountName}
+          onChange={props.handleChange}
+          name="accountName"
+          placeholder="Account Name"
+        />
+        <input
+          type="number"
+          id="account"
+          value={props.cost}
+          onChange={props.handleChange}
+          name="number"
+          placeholder="Account Number"
+        />
+        <label htmlFor="date">
+          Payment Due Date
+          <input
+            type="date"
+            placeholder="Payment Due Date"
+            id="date"
+            value={props.date}
+            onChange={props.handleChange}
+            name="date"
+          />
+        </label>
         <Frequency selected={selected} setSelected={setSelected} />
+        <Compulsory selected={collection} setSelected={setCollection} />
       </div>
       <button className="btn btn-success btn-block">Add Utility</button>
     </div>
@@ -166,7 +198,7 @@ const SearchField = (props) => {
             type="text"
             value={value}
             onChange={onChange}
-            placeholder="Search Utility"
+            placeholder=" Utility Name"
           />
           {/* <button onClick={() => onSearch(value)}> Search </button> */}
         </div>

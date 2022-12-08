@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <PageFeatures className="webContainer">
       <div className="headingB ">
-        <p>Features</p>
+        <p id="Features">Features</p>
         <h3>
           The <span> Complete Toolset</span> For Your <span>Community</span>
         </h3>

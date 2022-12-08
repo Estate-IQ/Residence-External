@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const TargetedPK = ({ selected, setSelected }) => {
+const Compulsory = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ["All", "Residents", "Vendors", "Security"];
+  const options = ["Mandatory", "Non-Mandatory"];
   return (
     <div className="select_me filter_drop">
       <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
@@ -43,4 +43,4 @@ const TargetedPK = ({ selected, setSelected }) => {
   );
 };
 
-export default TargetedPK;
+export default Compulsory;
