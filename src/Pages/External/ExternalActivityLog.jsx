@@ -61,7 +61,7 @@ function ExternalActivityLog() {
         last_name,
         resident_id,
         account_type,
-        mobile,
+        // mobile,
         address,
         date,
         time,
@@ -73,7 +73,7 @@ function ExternalActivityLog() {
           <td>
             {first_name} {last_name}
           </td>
-          <td className="residence-address">{mobile}</td>
+          {/* <td className="Residents-address">{mobile}</td> */}
           <td>PQT-34567</td>
           <td>{account_type}</td>
           <td className="defaultWidth">
@@ -187,8 +187,8 @@ function ExternalActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
-                            <th>Mobile</th>
+                            <th>Residents Name</th>
+                            {/* <th>Mobile</th> */}
                             <th>Access Code</th>
                             <th>Account Type</th>
                             <th>Destination</th>
@@ -209,9 +209,9 @@ function ExternalActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -229,9 +229,9 @@ function ExternalActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -434,7 +434,7 @@ const TableFrame = styled.div`
   //     align-items: center;
   //     color: #545454;
   // }
-  .residence-address {
+  .Residents-address {
     width: 190px;
     height: 34px;
     font-family: "Satoshi";

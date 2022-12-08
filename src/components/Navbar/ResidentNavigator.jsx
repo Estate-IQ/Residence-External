@@ -18,7 +18,7 @@ const DesktopTab = (props) => {
 
         <img src={SVGs.brand_logo} alt="Estate IQ" className="for_phone" />
 
-        <Link to="/overview">
+        <Link to="/residents">
           <div id="option" className={props.overview}>
             <div>
               <svg
@@ -60,8 +60,8 @@ const DesktopTab = (props) => {
             </div>
           </div>
         </Link>
-        <Link to="/resident/residence">
-          <div id="option" className={props.residence}>
+        <Link to="/resident/Residents">
+          <div id="option" className={props.Residents}>
             <div>
               <svg
                 width="20"

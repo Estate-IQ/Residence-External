@@ -62,7 +62,7 @@ const MobileSelect = ({ open }) => {
               />
               <div>
                 <h3>Angelina Jolie Jodan</h3>
-                <p>Residence</p>
+                <p>Residents</p>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const MobileSelect = ({ open }) => {
         <Link to="/admin">
           <li className="before_list over_view">Overview</li>
         </Link>
-        <Link to="/admin/residence">
+        <Link to="/admin/Residents">
           <li className="before_list est">Residents</li>
         </Link>
         <Link to="" style={{ opacity: "0.4" }}>

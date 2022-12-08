@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-const TargetedPK = ({ selected, setSelected }) => {
+const ProfileType = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ["All", "Residents", "Vendors", "Security"];
+
+  const options = ["Ambulance", "Fire Service", "Security"];
   return (
     <div className="select_me filter_drop">
       <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
-        {selected}
+        <input type="text" value={selected} readOnly />
         <svg
           width="25"
           height="24"
@@ -43,4 +44,4 @@ const TargetedPK = ({ selected, setSelected }) => {
   );
 };
 
-export default TargetedPK;
+export default ProfileType;

@@ -72,7 +72,7 @@ const RightNav = ({ open }) => {
         <Link to="/admin">
           <li className="before_list over_view">Overview</li>
         </Link>
-        <Link to="/admin/residence">
+        <Link to="/admin/household">
           <li className="before_list est">Residents</li>
         </Link>
         <Link to="" style={{ opacity: "0.4" }}>

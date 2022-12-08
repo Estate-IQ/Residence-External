@@ -202,9 +202,9 @@ function AdminActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -222,9 +222,9 @@ function AdminActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -242,9 +242,9 @@ function AdminActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -438,7 +438,7 @@ const TableFrame = styled.div`
   //     align-items: center;
   //     color: #545454;
   // }
-  .residence-address {
+  .Residents-address {
     width: 153px;
     height: 34px;
     font-family: "Satoshi";

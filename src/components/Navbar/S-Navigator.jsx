@@ -7,11 +7,13 @@ const DesktopTab = (props) => {
     <section className="control_view">
       <div className="desktop_nav">
         <div className="changeNarative">
-          <img
-            src={SVGs.brand_name}
-            alt="Estate IQ"
-            className="for_desktops superadmin_logo"
-          />
+          <Link to="/login">
+            <img
+              src={SVGs.brand_name}
+              alt="Estate IQ"
+              className="for_desktops superadmin_logo"
+            />
+          </Link>
         </div>
 
         <img src={SVGs.brand_logo} alt="Estate IQ" className="for_phone" />

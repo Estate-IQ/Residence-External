@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ResidenceProfile from "../../components/ProfileSettings";
+import ResidentsProfile from "../../components/ProfileSettings";
 import AdminEmail from "../../components/ChangeEmail";
 import GNavbar from "../../components/Navbar/ResidentNavigator";
 import Mobile from "../../components/Navbar/ResidentMobile";
@@ -8,7 +8,7 @@ import TopNav from "../../components/Navbar/ResidentNav";
 import AdminPassword from "../../components/ChangePassword";
 import AdminNotice from "../../components/NotificationSettings";
 
-const ResidenceSettings = () => {
+const ResidentsSettings = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) =>
@@ -56,7 +56,7 @@ const ResidenceSettings = () => {
 
             <div className="panels">
               <div className={`panel ${checkActive(1, "active")}`}>
-                <ResidenceProfile />
+                <ResidentsProfile />
               </div>
               <div className={`panel ${checkActive(2, "active")}`}>
                 <AdminEmail />
@@ -75,7 +75,7 @@ const ResidenceSettings = () => {
   );
 };
 
-export default ResidenceSettings;
+export default ResidentsSettings;
 
 const HandleSearchAndTab = styled.section`
   .container {

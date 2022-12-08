@@ -18,10 +18,10 @@ import ContactUs from "./Pages/Website/Contact";
 import ResidentComplain from "./Pages/Residents/ResidentComplain";
 import ResidentTransaction from "./Pages/Residents/Transaction";
 import ResidentActivityLog from "./Pages/Residents/ActivityLog";
-import Residents from "./Pages/Residents/Residence";
+import Residents from "./Pages/Residents/Residents";
 import ResidentsOverview from "./Pages/Residents/Dashboard";
 import Redirect from "./Pages/Residents/RedirectHome";
-import RedirectSettings from "./Pages/Settings/Residence";
+import RedirectSettings from "./Pages/Settings/Residents";
 
 // EXTERNAL
 import ExternalComplain from "./Pages/External/ExternalComplaint";
@@ -29,6 +29,16 @@ import ExternalActivityLog from "./Pages/External/ExternalActivityLog";
 import ExternalDashboard from "./Pages/External/ExternalDashboard";
 import GrantAccess from "./Pages/External/VerifyUser";
 import ExternalSettings from "./Pages/Settings/External";
+
+// ADMIN
+import AdminOverview from "./Pages/Admin/A-Overview";
+import AdminResidents from "./Pages/Admin/Residents";
+import AdminUtilities from "./Pages/Admin/Utilities";
+import AdminTransaction from "./Pages/Admin/AdminTransaction";
+import AdminActivityLog from "./Pages/Admin/Activity";
+import AdminComplaint from "./Pages/Admin/AdminComplains";
+import AdminSettings from "./Pages/Settings/Admin";
+// ===================
 
 // SUPERADMIN
 import EstateProfile from "./components/Profile";
@@ -81,11 +91,11 @@ function App() {
             />
 
             {/* RESIDENT */}
-            <Route path="/residence" element={<ResidentsOverview />} />
-            <Route path="/residence/settings" element={<RedirectSettings />} />
+            <Route path="/Residents" element={<ResidentsOverview />} />
+            <Route path="/Residents/settings" element={<RedirectSettings />} />
             <Route path="/redirect=token" element={<Redirect />} />
             <Route path="/resident/complaint" element={<ResidentComplain />} />
-            <Route path="/resident/residence" element={<Residents />} />
+            <Route path="/resident/Residents" element={<Residents />} />
             <Route
               path="/resident/activitylog"
               element={<ResidentActivityLog />}
@@ -94,6 +104,15 @@ function App() {
               path="/resident/transaction"
               element={<ResidentTransaction />}
             />
+
+            {/* ADMIN */}
+            <Route exact path="/admin" element={<AdminOverview />} />
+            <Route exact path="/admin/settings" element={<AdminSettings />} />
+            <Route path="/admin/household" element={<AdminResidents />} />
+            <Route path="/admin/activitylog" element={<AdminActivityLog />} />
+            <Route path="/admin/utilities" element={<AdminUtilities />} />
+            <Route path="/admin/transaction" element={<AdminTransaction />} />
+            <Route path="/admin/complaint" element={<AdminComplaint />} />
 
             {/* SUPERADMIN */}
             <Route path="/superadmin" element={<SuperAdminOverview />} />

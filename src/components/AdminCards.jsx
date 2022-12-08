@@ -30,21 +30,36 @@ const Overview_card = () => {
   };
   return (
     <OverviewRap className="fourcard_grid all_overview">
-      <PerOverview img={SVGs.Resident} type="Household" count="14" />
+      <PerOverview
+        img={SVGs.Resident}
+        type="Household"
+        count="14"
+        link="/admin/household"
+      />
       <PerOverview
         img={SVGs.overview_svg}
         type="Residents"
         count="14"
-        // link="/superadmin/estate"
+        link="/admin/activitylog"
       />
 
-      <PerOverview img={SVGs.Resident} type="Security" count="6" />
-      <PerOverview img={SVGs.vendor} type="Vendors" count="9" />
       <PerOverview
-        img={SVGs.complains}
-        type="Complaints"
+        img={SVGs.Resident}
+        type="Security"
+        count="6"
+        link="/admin/household"
+      />
+      <PerOverview
+        img={SVGs.vendor}
+        type="Vendors"
+        count="9"
+        link="/admin/household"
+      />
+      <PerOverview
+        img={SVGs.visitors}
+        type="Visitors"
         count="2"
-        link="/admin/complaint"
+        link="/admin/activitylog"
       />
     </OverviewRap>
   );

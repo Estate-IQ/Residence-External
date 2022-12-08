@@ -298,7 +298,7 @@ const API = [
     first_name: "Scarlet",
     last_name: "Blampey",
     block: "01387 Hoepker Park",
-    type: "Residence",
+    type: "Residents",
     status: "Decline",
   },
   {
@@ -306,7 +306,7 @@ const API = [
     first_name: "Ardelle",
     last_name: "Larkworthy",
     block: "319 Oneill Plaza",
-    type: "Residence",
+    type: "Residents",
     status: "Decline",
   },
   {
@@ -314,7 +314,7 @@ const API = [
     first_name: "Helge",
     last_name: "Lush",
     block: "9 Algoma Terrace",
-    type: "Residence",
+    type: "Residents",
     status: "Accept",
   },
   {
@@ -330,7 +330,7 @@ const API = [
     first_name: "Mickie",
     last_name: "Gadeaux",
     block: "4159 Chinook Center",
-    type: "Residence",
+    type: "Residents",
     status: "Decline",
   },
   {

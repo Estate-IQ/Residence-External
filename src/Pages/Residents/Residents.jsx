@@ -7,7 +7,7 @@ import CreateResident from "../../components/CreateResident";
 import Mobile from "../../components/Navbar/ResidentMobile";
 import TopNav from "../../components/Navbar/ResidentNav";
 
-function ResidencesView() {
+function ResidentssView() {
   const [events, setEvents] = useState(API.slice(0, 20));
   const [value, setvalue] = useState("");
 
@@ -116,7 +116,7 @@ function ResidencesView() {
   return (
     <>
       <section className="change_ratio">
-        <GNavbar residence="active_tab" />
+        <GNavbar Residents="active_tab" />
         <Mobile />
         <CreateResident open={openModal} onClose={() => setOpenModal(false)} />
         <div className="selected_tab">
@@ -168,7 +168,7 @@ function ResidencesView() {
 
             <div className="panels">
               <div className={`panel ${checkActive(1, "active")}`}>
-                <TableResidence>
+                <TableResidents>
                   <div>
                     <div className="activity_table">
                       <table>
@@ -187,10 +187,10 @@ function ResidencesView() {
                       </table>
                     </div>
                   </div>
-                </TableResidence>
+                </TableResidents>
               </div>
               <div className={`panel ${checkActive(2, "active")}`}>
-                <TableResidence>
+                <TableResidents>
                   <div>
                     <div className="activity_table">
                       <table>
@@ -209,7 +209,7 @@ function ResidencesView() {
                       </table>
                     </div>
                   </div>
-                </TableResidence>
+                </TableResidents>
               </div>
             </div>
             <ReactPaginate
@@ -230,7 +230,7 @@ function ResidencesView() {
   );
 }
 
-export default ResidencesView;
+export default ResidentssView;
 const SwitchBtn = styled.div`
   .switch {
     display: inline-block;
@@ -274,7 +274,7 @@ const SwitchBtn = styled.div`
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
   }
 `;
-const TableResidence = styled.div`
+const TableResidents = styled.div`
   .activity_heading {
     font-family: "Satoshi";
     margin: 20px;
@@ -317,7 +317,7 @@ const TableResidence = styled.div`
   //     align-items: center;
   //     color: #545454;
   // }
-  .residence-address {
+  .Residents-address {
     width: 153px;
     height: 34px;
     font-family: "Satoshi";

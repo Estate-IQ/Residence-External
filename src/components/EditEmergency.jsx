@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Swal from "sweetalert2";
 import { SVGs } from "../assets/svg/SVGs";
+import ProfileType from "./E-ProfileType";
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -43,7 +44,8 @@ const CreateSOS = () => {
             </div>
           </div>
 
-          <input type="text" id="name" name="name" placeholder="Profile Type" />
+          {/* Create Account Type */}
+          <ProfileType selected={selected} setSelected={setSelected} />
           <input
             type="text"
             id="title"
@@ -51,8 +53,6 @@ const CreateSOS = () => {
             placeholder="Emergency Service Name"
           />
 
-          {/* Create Account Type */}
-          <AccountType selected={selected} setSelected={setSelected} />
           <input
             type="text"
             id="address"
@@ -76,6 +76,71 @@ const CreateSOS = () => {
             placeholder="Email"
           />
         </div>
+
+        <RevokeAccess>
+          <h2>News Receiver</h2>
+
+          <div className="revokeOnes">
+            <div className="each_access">
+              <div class="cntr">
+                <label for="cbx" class="label-cbx">
+                  <input
+                    id="cbx"
+                    name="cbx"
+                    type="checkbox"
+                    class="invisible"
+                    checked
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Estate Admins</span>
+              </div>
+            </div>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="util" class="label-cbx">
+                  <input
+                    id="util"
+                    name="util"
+                    type="checkbox"
+                    class="invisible"
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Households</span>
+              </div>
+            </div>
+            <div className="each_access">
+              <div class="cntr">
+                <label for="emergency" class="label-cbx">
+                  <input
+                    id="emergency"
+                    name="emergency"
+                    type="checkbox"
+                    class="invisible"
+                  />
+                  <div class="checkbox">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                      <polyline points="4 11 8 15 16 6"></polyline>
+                    </svg>
+                  </div>
+                </label>
+                <span>Securities</span>
+              </div>
+            </div>
+          </div>
+        </RevokeAccess>
         <button>Create Profile</button>
       </div>
     </form>
@@ -100,49 +165,6 @@ const Modal = ({ open, onClose }) => {
 };
 export default Modal;
 
-const AccountType = ({ selected, setSelected }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const options = ["Ambulance", "Fire Service", "Security"];
-  return (
-    <div className="select_me filter_drop">
-      <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
-        <input type="text" value={selected} readOnly />
-        <svg
-          width="25"
-          height="24"
-          viewBox="0 0 25 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M6.5 9L12.5 15L18.5 9"
-            stroke="#545454"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      {isActive && (
-        <div className="select_content">
-          {/* <h5>Duration</h5> */}
-          {options.map((option) => (
-            <div
-              className="select_items"
-              onClick={(e) => {
-                setSelected(option);
-                setIsActive(false);
-              }}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
 let ModalWrapper = styled.div`
   .modalContainer {
     max-width: 600px;
@@ -158,5 +180,21 @@ let ModalWrapper = styled.div`
       letter-spacing: 0em;
       text-align: left;
     }
+  }
+`;
+
+let RevokeAccess = styled.div`
+  .revokeOnes {
+    height: 200px;
+    overflow: auto;
+  }
+  h2 {
+    font-size: 20px;
+
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .cntr {
+    margin-top: 10px;
   }
 `;

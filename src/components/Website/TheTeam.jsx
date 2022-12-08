@@ -4,7 +4,7 @@ import { Images } from "../../assets/images/Images";
 
 const TheTeam = () => {
   return (
-    <Teams>
+    <Teams id="Team">
       <section className="webContainer">
         <div className="topLabel mb-4">
           <p>Meet the Team</p>

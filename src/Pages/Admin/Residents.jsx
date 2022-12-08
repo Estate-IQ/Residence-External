@@ -2,14 +2,14 @@ import React, { useState } from "react";
 // import JsonData from '../Mock-API.json'
 import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
 import styled from "styled-components";
-import AddNewResidence from "../../components/AddNew";
+import AddNewResidents from "../../components/AddNew";
 import AddBoardMember from "../../components/AddBoardMember";
 import GNavbar from "../../components/Navbar/A-Navigator";
 import Mobile from "../../components/Navbar/AdminMobile";
 import TopNav from "../../components/Navbar/AdminNav";
 import { SVGs } from "../../assets/svg/SVGs";
 
-function AdminResidence() {
+function AdminResidents() {
   const [events, setEvents] = useState(API.slice(0, 20));
   const [value, setvalue] = useState("");
   const [resident, setResident] = useState("Add New");
@@ -133,11 +133,11 @@ function AdminResidence() {
             <div
               className="select_items"
               onClick={(e) => {
-                setSelected("Add Residence");
+                setSelected("Add Residents");
                 setIsActive(false);
               }}
             >
-              <p onClick={() => setOpenModal(true)}>Add Residence</p>
+              <p onClick={() => setOpenModal(true)}>Add Residents</p>
             </div>
             {/* Add Board Member */}
             <div
@@ -157,9 +157,9 @@ function AdminResidence() {
   return (
     <>
       <section className="change_ratio">
-        <GNavbar residence="active_tab" />
+        <GNavbar Residents="active_tab" />
         <Mobile />
-        <AddNewResidence open={openModal} onClose={() => setOpenModal(false)} />
+        <AddNewResidents open={openModal} onClose={() => setOpenModal(false)} />
         <AddBoardMember open={board} onClose={() => setBoardMember(false)} />
         <div className="selected_tab">
           <TopNav />
@@ -222,7 +222,7 @@ function AdminResidence() {
                     <table>
                       <thead>
                         <tr>
-                          <th>Residence ID</th>
+                          <th>Residents ID</th>
                           <th>Address</th>
                           <th>Contact</th>
                           <th>Action</th>
@@ -238,7 +238,7 @@ function AdminResidence() {
                   <table>
                     <thead>
                       <tr>
-                        <th>Residence ID</th>
+                        <th>Residents ID</th>
                         <th>Address</th>
                         <th>Contact</th>
                         <th>Action</th>
@@ -253,7 +253,7 @@ function AdminResidence() {
                   <table>
                     <thead>
                       <tr>
-                        <th>Residence ID</th>
+                        <th>Residents ID</th>
                         <th>Address</th>
                         <th>Contact</th>
                         <th>Action</th>
@@ -282,7 +282,7 @@ function AdminResidence() {
   );
 }
 
-export default AdminResidence;
+export default AdminResidents;
 
 const Action = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);

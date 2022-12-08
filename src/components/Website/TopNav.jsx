@@ -29,7 +29,7 @@ const TopNav = () => {
                     <Link to="/about">
                       <li>Who We are</li>
                     </Link>
-                    <HashLink to="#Team" smooth>
+                    <HashLink to="/#Team" smooth>
                       <li>Our Team </li>
                     </HashLink>
 
@@ -38,10 +38,10 @@ const TopNav = () => {
                     {/* <li>Our Partners</li> */}
                   </ul>
                 </li>
-                <HashLink to="#Benefits" smooth>
+                <HashLink to="/#Benefits" smooth>
                   <li>Benefits</li>
                 </HashLink>
-                <HashLink to="#Features" smooth>
+                <HashLink to="/#Features" smooth>
                   <li>Features</li>
                 </HashLink>
                 <Link to="/contact">
@@ -50,7 +50,9 @@ const TopNav = () => {
               </ul>
 
               <div className="scheduleDemo">
-                <Link to="/login"><button className="outlined-btn">Sign In</button></Link>
+                <Link to="/login">
+                  <button className="outlined-btn">Sign In</button>
+                </Link>
                 <button className="scheduleButton">Schedule Demo</button>
               </div>
             </div>

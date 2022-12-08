@@ -39,8 +39,8 @@ const DesktopTab = (props) => {
               </div>
             </div>
           </Link>
-          <Link to="/admin/residence">
-            <div id="option" className={props.residence}>
+          <Link to="/admin/household">
+            <div id="option" className={props.Residents}>
               <div>
                 <svg
                   width="20"
@@ -56,7 +56,7 @@ const DesktopTab = (props) => {
                     fill="#F6F6F6"
                   />
                 </svg>
-                <h4>Residents</h4>
+                <h4>Households</h4>
               </div>
             </div>
           </Link>
@@ -219,11 +219,6 @@ let HandleHeight = styled.div`
   @media (min-width: 1380px) {
     .changeAdmin {
       margin-bottom: 50px;
-    }
-  }
-  @media (max-width: 1380px) {
-    .changeAdmin {
-      margin-bottom: 20px;
     }
   }
 `;

@@ -78,7 +78,7 @@ function ResidentActivityLog() {
           <td>
             {first_name} {last_name}
           </td>
-          <td className="residence-address">{mobile}</td>
+          <td className="Residents-address">{mobile}</td>
           <td>{account_type}</td>
           <td>
             <div className="date-time">{date}</div>
@@ -189,7 +189,7 @@ function ResidentActivityLog() {
                         <thead>
                           <tr>
                             <th>ID</th>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Mobile</th>
                             <th>Account Type</th>
                             <th>Date and Time</th>
@@ -209,9 +209,9 @@ function ResidentActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -229,9 +229,9 @@ function ResidentActivityLog() {
                       <table>
                         <thead>
                           <tr>
-                            <th>Residence Name</th>
+                            <th>Residents Name</th>
                             <th>Email</th>
-                            <th>Residence Address</th>
+                            <th>Residents Address</th>
                             <th>Date and Time</th>
                             <th>Action</th>
                           </tr>
@@ -434,7 +434,7 @@ const TableFrame = styled.div`
   //     align-items: center;
   //     color: #545454;
   // }
-  .residence-address {
+  .Residents-address {
     width: 190px;
     height: 34px;
     font-family: "Satoshi";

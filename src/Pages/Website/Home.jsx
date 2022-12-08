@@ -19,8 +19,8 @@ const Home = () => {
 
       <Banner />
       <YellowBg>
-        <BuildLife id="Benefits" />
-        <Features id="Features" />
+        <BuildLife />
+        <Features />
       </YellowBg>
       <BlueBg>
         <Benefits />

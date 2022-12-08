@@ -10,8 +10,8 @@ const Login = () => {
           <img src={Images.logo} alt="Estate-IQ" />
           <form action="" className="fade-in-bck">
             <div className="form_txt">
-              <h1>Create Estate</h1>
-              <h4>Admin Info</h4>
+              <h1>Welcome Back</h1>
+              <h4>Log In</h4>
               <p className="with_link">
                 New user? <Link to="/get-started"> Create account</Link>
               </p>
