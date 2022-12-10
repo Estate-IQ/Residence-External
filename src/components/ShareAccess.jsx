@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const ShareAccess = () => {
-  const ShareText = () => {
+  const ShareText = (user) => {
+    // Get the first name and other info from the user object
+    const firstName = user.firstName;
+    const code = user.code;
+    const address = user.address;
+    const date = user.date;
+    const from = user.from;
+    const to = user.to;
     if (navigator.share) {
       navigator
         .share({
           title: "Estate Invite",
-          text: "Hi Makinde!, Someone invited you to come and visit the at No 20 Abesan Street Lekki Lagos",
+          text: `Hi <p> ${firstName}! </p> <br /> Your one-time code is ${code}. Address to the destination is ${address} on ${date} from ${from} to ${to}`,
         })
         .then(() => console.log("Text was shared successfully."))
         .catch((error) =>
@@ -17,6 +24,17 @@ const ShareAccess = () => {
       console.log("The Web Share API is not supported on this browser.");
     }
   };
+
+  const user = {
+    firstName: "John",
+    code: "887457",
+    address: "50A Lagos Teaching Hospital Road,Alausa Ikeja Lagos",
+    date: "24 July 2023",
+    from: "9:30AM",
+    to: "12:30PM",
+  };
+
+  ShareText(user);
   return (
     <AccessPin className="accessPin">
       <h3>New Access Pin</h3>
