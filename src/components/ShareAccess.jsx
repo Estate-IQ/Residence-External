@@ -10,12 +10,18 @@ const ShareAccess = () => {
     const date = user.date;
     const from = user.from;
     const to = user.to;
+    const website = user.website;
+
     // if (firstName) {
     if (navigator.share) {
       navigator
         .share({
           title: "Estate Invite",
-          text: `Hi ${firstName}!\n \nYour one-time code is ${code}.\n \nAddress to the destination is ${address} on ${date} from ${from} to ${to}`,
+          text: `Hi ${firstName}!\n \nYour one-time code is ${code}.\n \nAddress to the destination is ${address} on ${date} from ${from} to ${to}.
+
+          \n \n \n 
+          Powered by ${website}
+          `,
         })
         .then(() => console.log("Text was shared successfully."))
         .catch((error) =>
@@ -36,6 +42,7 @@ const ShareAccess = () => {
     date: "24 July 2023",
     from: "9:30AM",
     to: "12:30PM",
+    website: "https://estate-iq.netlify.app/",
   };
 
   ShareText(user);
