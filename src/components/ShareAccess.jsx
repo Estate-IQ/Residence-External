@@ -14,7 +14,7 @@ const ShareAccess = () => {
       navigator
         .share({
           title: "Estate Invite",
-          text: `Hi <p style="margin-top: 10px; margin-bottom: 10px;">${firstName}!</p> <br /> Your one-time code is ${code}. Address to the destination is ${address} on ${date} from ${from} to ${to}`,
+          text: `Hi ${firstName}! Your one-time code is ${code}. Address to the destination is ${address} on ${date} from ${from} to ${to}`,
         })
         .then(() => console.log("Text was shared successfully."))
         .catch((error) =>
