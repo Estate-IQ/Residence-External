@@ -10,23 +10,23 @@ const ShareAccess = () => {
     const date = user.date;
     const from = user.from;
     const to = user.to;
-    if (firstName) {
-      if (navigator.share) {
-        navigator
-          .share({
-            title: "Estate Invite",
-            text: `Hi <p style="margin-top: 10px; margin-bottom: 10px;"> ${firstName}! </p> Your one-time code is ${code}. Address to the destination is ${address} on ${date} from ${from} to ${to}`,
-          })
-          .then(() => console.log("Text was shared successfully."))
-          .catch((error) =>
-            console.log("There was an error sharing the text:", error)
-          );
-      } else {
-        console.log("The Web Share API is not supported on this browser.");
-      }
+    // if (firstName) {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Estate Invite",
+          text: `Hi ${firstName}! <br />Your one-time code is ${code}. Address to the destination is ${address} on ${date} from ${from} to ${to}`,
+        })
+        .then(() => console.log("Text was shared successfully."))
+        .catch((error) =>
+          console.log("There was an error sharing the text:", error)
+        );
     } else {
-      console.log("The user's first name is not defined.");
+      console.log("The Web Share API is not supported on this browser.");
     }
+    // } else {
+    //   console.log("The user's first name is not defined.");
+    // }
   };
 
   const user = {
