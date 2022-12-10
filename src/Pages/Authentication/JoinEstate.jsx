@@ -82,9 +82,6 @@ class MasterForm extends React.Component {
       showConfirmButton: false,
       showCloseButton: true,
     });
-    // .then(function () {
-    //   window.location = "/estate-iq/superadmin-overview";
-    // });
 
     fetch("", {
       method: "POST",

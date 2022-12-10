@@ -22,6 +22,7 @@ import Residents from "./Pages/Residents/Residents";
 import ResidentsOverview from "./Pages/Residents/Dashboard";
 import Redirect from "./Pages/Residents/RedirectHome";
 import RedirectSettings from "./Pages/Settings/Residents";
+import Messages from "./Pages/Messages/Frontend/FrontChat";
 
 // EXTERNAL
 import ExternalComplain from "./Pages/External/ExternalComplaint";
@@ -77,6 +78,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/create-estate" element={<CreateEstate />} />
             <Route path="/join-estate" element={<JoinEstate />} />
+
             {/* <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/update-password" element={<UpdatePassword />} /> */}
 
@@ -138,6 +140,9 @@ function App() {
             {/* SLUGS */}
             <Route path="/profile" element={<EstateProfile />} />
             <Route path="/editpackage" element={<EditPackage />} />
+
+            {/* MESSAGES */}
+            <Route path="/messages" element={<Messages />} />
           </Routes>
         </BrowserRouter>
       </>
