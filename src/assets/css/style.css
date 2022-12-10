@@ -51,6 +51,7 @@ body {
           box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  overflow: -moz-scrollbars-vertical;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2754,10 +2755,21 @@ input:valid {
   }
 }
 
+.usersName::before {
+  content: url("../svg/estate_bLogo.svg");
+  margin-right: 10px;
+}
+
 @media (min-width: 1024px) {
   .container {
     padding: 0 60px;
   }
+}
+
+.searchInput::before {
+  content: "\1F50D";
+  font-size: 1em;
+  margin-right: 0.5em;
 }
 
 #swing-in-top-fwd {

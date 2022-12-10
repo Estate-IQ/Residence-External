@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  overflow: -moz-scrollbars-vertical;
   -webkit-tap-highlight-color: transparent;
 }
 .webContainer {
@@ -2305,13 +2306,22 @@ input:valid {
     padding: 0 60px;
   }
 }
-
+.usersName {
+  &::before {
+    content: url("../svg/estate_bLogo.svg");
+    margin-right: 10px;
+  }
+}
 @media (min-width: 1024px) {
   .container {
     padding: 0 60px;
   }
 }
-
+.searchInput::before {
+  content: "\1F50D";
+  font-size: 1em;
+  margin-right: 0.5em;
+}
 #swing-in-top-fwd {
   -webkit-animation: swing-in-top-fwd 0.5s
     cubic-bezier(0.175, 0.885, 0.32, 1.275) both;

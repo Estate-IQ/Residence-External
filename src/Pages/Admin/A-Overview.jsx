@@ -5,6 +5,7 @@ import TopNav from "../../components/Navbar/AdminNav";
 import AdminCards from "../../components/AdminCards";
 import Onboarding from "../../components/AdminOnboarding";
 import LatestResidentsAndChart from "../../components/AdminChart";
+import Example from "../../components/TestAI";
 
 const Overview = () => {
   return (
@@ -15,6 +16,7 @@ const Overview = () => {
         <TopNav />
 
         <div className="dashboard_container">
+          {/* <Example /> */}
           <Onboarding />
           <AdminCards />
           <LatestResidentsAndChart />

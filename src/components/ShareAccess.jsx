@@ -2,13 +2,30 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const ShareAccess = () => {
+  const ShareText = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Estate Invite",
+          text: "Hi Makinde!, Someone invited you to come and visit the at No 20 Abesan Street Lekki Lagos",
+        })
+        .then(() => console.log("Text was shared successfully."))
+        .catch((error) =>
+          console.log("There was an error sharing the text:", error)
+        );
+    } else {
+      console.log("The Web Share API is not supported on this browser.");
+    }
+  };
   return (
     <AccessPin className="accessPin">
       <h3>New Access Pin</h3>
       <h1 className="mainPin">PQY-3091</h1>
       <p>Code only valid for 12 Hours</p>
 
-      <button className="important-btn">Share</button>
+      <button className="important-btn" onClick={ShareText}>
+        Share
+      </button>
     </AccessPin>
   );
 };
