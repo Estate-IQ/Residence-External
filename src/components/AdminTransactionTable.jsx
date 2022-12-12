@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
 import styled from "styled-components";
+import AdminTransaction from "./AdminTransactionInvoice";
 import FilterBy from "./FilterBy";
+import MainInvoices from "./Invoices";
 
-const AdminTransactionTable = () => {
+const AdminTransactionTable = (props) => {
   const [events, setEvents] = useState(API.slice(0, 20));
   const [pageNumber, setPageNumber] = useState(0); // state representing the page we are on
   const [searchTerm, setSearchTerm] = useState("");
+  //Lets see the dynamic
+  const [rows, setRows] = useState(props.rows);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [invoice, setInvoice] = useState(false);
   const [selected, setSelected] = useState("Filter");
   const eventsPerPage = 9;
   const pagesVisited = pageNumber * eventsPerPage;
@@ -29,24 +35,19 @@ const AdminTransactionTable = () => {
       }
     })
     .slice(pagesVisited, pagesVisited + eventsPerPage)
-    .map((event) => {
-      const {
-        id,
-        collection_name,
-        zone,
-        collection,
-        date,
-        amount,
-        collection_target,
-      } = event;
-
+    .map((row, index) => {
       return (
         <tr className="transaction-row">
           <td className="checkmarking">
             {/* CUSTOM CHECKBOX */}
             <div class="cntr">
-              <label for={id} class="label-cbx">
-                <input id={id} type="checkbox" class="invisible" />
+              <label for={row.id} class="label-cbx">
+                <input
+                  id={row.id}
+                  type="checkbox"
+                  class="invisible"
+                  onChange={() => setSelectedUser(row)}
+                />
                 <div class="checkbox">
                   <svg width="20px" height="20px" viewBox="0 0 20 20">
                     <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -57,17 +58,17 @@ const AdminTransactionTable = () => {
             </div>
           </td>
 
-          <td>{collection_name}</td>
+          <td>{row.collection_name}</td>
           <td>
             <div className="data-zone">
-              <div className="zone-name">{zone}</div>
+              <div className="zone-name">{row.zone}</div>
             </div>
           </td>
 
-          <td>{collection}</td>
-          <td>{collection_target}</td>
-          <td className="transaction-date">{date}</td>
-          <td>{amount} </td>
+          <td>{row.collection}</td>
+          <td>{row.collection_target}</td>
+          <td className="transaction-date">{row.date}</td>
+          <td>{row.amount} </td>
         </tr>
       );
     }); // display items from 1 -6
@@ -77,6 +78,14 @@ const AdminTransactionTable = () => {
   const changePage = ({ selected }) => {
     // selected the number for the page we want to move too
     setPageNumber(selected);
+  };
+
+  const handleCheckboxChange = (event) => {
+    if (event.target.checked) {
+      setSelectedUser(event.target.value);
+    } else {
+      setSelectedUser(null);
+    }
   };
   return (
     <Container>
@@ -98,11 +107,14 @@ const AdminTransactionTable = () => {
             </div>
 
             <FilterBy selected={selected} setSelected={setSelected} />
-            <button className="outlined-btn">Generate Invoice </button>
+            <button className="outlined-btn" onClick={() => setInvoice(true)}>
+              Generate Invoice
+            </button>
           </div>
         </HandleSearchAndTab>
       </section>
       <TableFrame className="scrollable_table">
+        <AdminTransaction open={invoice} onClose={() => setInvoice(false)} />
         <div className="scroll">
           <table>
             <thead>
@@ -130,8 +142,27 @@ const AdminTransactionTable = () => {
                 <th>Amount</th>
               </tr>
             </thead>
+
+            {/* <tbody>
+              {rows.map((row, index) => (
+                <tr key={index}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      onChange={() => setSelectedUser(row)}
+                    />
+                  </td>
+                  <td>{row.transaction}</td>
+                  <td>{row.description}</td>
+                  <td>{row.status}</td>
+                  <td>{row.date}</td>
+                </tr>
+              ))}
+            </tbody> */}
             <tbody>{displayEvents}</tbody>
           </table>
+
+          {/* {selectedUser && <MainInvoices user={selectedUser} />} */}
         </div>
 
         <ReactPaginate
@@ -150,6 +181,7 @@ const AdminTransactionTable = () => {
   );
 };
 
+// ma;
 export default AdminTransactionTable;
 const Container = styled.div`
   .dinko {

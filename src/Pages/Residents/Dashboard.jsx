@@ -7,6 +7,7 @@ import ResidentCards from "../../components/ResidentCard";
 import CreateAds from "../../components/CreateAds";
 import LatestAccess from "../../components/LatestAccess";
 import styled from "styled-components";
+import Invoices from "../../components/Invoices";
 // import LatestResidentsAndChart from "../../components/AdminChart";
 
 const Overview = () => {
@@ -16,7 +17,7 @@ const Overview = () => {
       <Mobile />
       <section className="selected_tab">
         <TopNav />
-
+        {/* <Invoices /> */}
         <div className="dashboard_container">
           <QuickAccess />
           <ResidentCards />

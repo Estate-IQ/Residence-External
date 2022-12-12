@@ -9,6 +9,7 @@ import LatestAccess from "../../components/LatestAccess";
 import styled from "styled-components";
 import GiveAccess from "../../components/ShareAccess";
 import PinState from "../../components/PinState";
+import Invoices from "../../components/Invoices";
 // import LatestResidentsAndChart from "../../components/AdminChart";
 
 const Overview = () => {
@@ -23,6 +24,7 @@ const Overview = () => {
           <QuickAccess />
           <ResidentCards />
           <PinState />
+
           <AdvertContainer>
             <CreateAds />
             <LatestAccess />

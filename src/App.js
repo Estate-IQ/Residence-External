@@ -6,8 +6,14 @@ import "./assets/css/estate.css";
 // AUTH
 import ChooseMode from "./Pages/Authentication/ChooseMode";
 import Login from "./components/Login";
+import Test from "./Test/Test";
 import JoinEstate from "./Pages/Authentication/JoinEstate";
 import CreateEstate from "./Pages/Authentication/CreateEstate";
+// Messages
+import AdMessage from "./Pages/Messages/Frontend/AdMessage";
+import SuperMessage from "./Pages/Messages/Frontend/SuperAdminChats";
+import ResidentMessage from "./Pages/Messages/Frontend/Residence";
+import ExternalMessage from "./Pages/Messages/Frontend/External";
 
 // WEBSITES
 import Homepage from "./Pages/Website/Home";
@@ -22,7 +28,6 @@ import Residents from "./Pages/Residents/Residents";
 import ResidentsOverview from "./Pages/Residents/Dashboard";
 import Redirect from "./Pages/Residents/RedirectHome";
 import RedirectSettings from "./Pages/Settings/Residents";
-import Messages from "./Pages/Messages/Frontend/FrontChat";
 
 // EXTERNAL
 import ExternalComplain from "./Pages/External/ExternalComplaint";
@@ -52,6 +57,7 @@ import SuperAdminTask from "./Pages/SuperAdmin/Tasks/Task";
 import SuperAdminPermission from "./Pages/SuperAdmin/Permissions/Permission";
 // import SuperAdminComplaint from "./Pages/SuperAdmin/Complaints/Complaint";
 import SuperAdminComplaint from "./Pages/SuperAdmin/Complaints/SuperAdminComplaint";
+import InvoiceDownloader from "./components/InvoicesDownload";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -70,6 +76,7 @@ function App() {
             {/* Website*/}
             <Route index element={<Homepage />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/test" element={<Test />} />
             <Route path="/contact" element={<ContactUs />} />
             {/* <Route path="/about" element={<AboutUs />} /> */}
 
@@ -142,7 +149,10 @@ function App() {
             <Route path="/editpackage" element={<EditPackage />} />
 
             {/* MESSAGES */}
-            <Route path="/messages" element={<Messages />} />
+            <Route path="/a-messages" element={<AdMessage />} />
+            <Route path="/s-messages" element={<SuperMessage />} />
+            <Route path="/r-messages" element={<ResidentMessage />} />
+            <Route path="/e-messages" element={<ExternalMessage />} />
           </Routes>
         </BrowserRouter>
       </>

@@ -26,7 +26,7 @@ export default class Responsive extends Component {
               <PerSlide>
                 <div className="handleImg">
                   <img
-                    src="https://images.unsplash.com/photo-1562342918-28657524a992?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    src="https://images.unsplash.com/photo-1612040866046-919238fb5544?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
                     alt=""
                   />
                   {/* <img src={Images.blog2} alt="" /> */}
@@ -46,7 +46,10 @@ export default class Responsive extends Component {
             <div>
               <PerSlide>
                 <div className="handleImg">
-                  <img src={Images.blog2} alt="" />
+                  <img
+                    src="https://images.unsplash.com/photo-1517840933437-c41356892b35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt=""
+                  />
                   <span>Advert</span>
                 </div>
                 <div className="handleText">

@@ -58,7 +58,7 @@ const DesktopTab = (props) => {
           </div>
         </Link>
 
-        <Link to="/" style={{ opacity: "0.4" }}>
+        <Link to="/e-messages">
           <div id="option" className={props.message}>
             <div>
               <svg

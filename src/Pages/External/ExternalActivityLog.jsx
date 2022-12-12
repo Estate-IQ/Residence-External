@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import JsonData from '../Mock-API.json'
 import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
 import styled from "styled-components";
-import GNavbar from "../../components/Navbar/ExternalNavigator.jsx";
+import GNavbar from "../../components/Navbar/ExternalNavigator";
 import Mobile from "../../components/Navbar/ExternalNavbar";
 import TopNav from "../../components/Navbar/ExternalNotify";
 

@@ -17,10 +17,7 @@ const ShareAccess = () => {
       navigator
         .share({
           title: "Estate Invite",
-          text: `Hi ${firstName}!\n \nYour one-time code is ${code}.\n \nAddress to the destination is ${address} on ${date} from ${from} to ${to}.\n \n
-          
-          Powered by: https://estate-iq.netlify.app/
-          `,
+          text: `Hi ${firstName}!\n \nYour one-time code is ${code}.\n \nAddress to the destination is ${address} on ${date} from ${from} to ${to}.\n \nPowered by: https://estate-iq.netlify.app/`,
         })
         .then(() => console.log("Text was shared successfully."))
         .catch((error) =>

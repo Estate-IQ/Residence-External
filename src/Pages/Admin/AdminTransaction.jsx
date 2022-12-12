@@ -117,6 +117,7 @@ function AdminTransaction() {
                   </div>
 
                   {/* Table is coming from another Component */}
+                  {/* <AdminTransactionTable rows={rows} /> */}
                   <AdminTransactionTable />
                 </TableFrame>
               </div>
