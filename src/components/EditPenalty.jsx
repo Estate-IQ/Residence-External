@@ -6,6 +6,7 @@ import Frequency from "./Frequency";
 import CollectionTarget from "./CollectionTarget";
 import CollectionType from "./CollectionType";
 import styled from "styled-components";
+import SetPeriod from "./SetPeriod";
 // import States from "../../../components/Location";
 // import LGAs from "../../../components/States/State";
 
@@ -147,6 +148,7 @@ class CreateCollection extends React.Component {
 
 function Step2(props) {
   const [selected, setSelected] = useState("Penalty For");
+  const [period, setPeriod] = useState("Select Period");
 
   if (props.currentStep !== 1) {
     return null;
@@ -160,6 +162,32 @@ function Step2(props) {
         </div>
 
         <CollectionType selected={selected} setSelected={setSelected} />
+        <label htmlFor="date">
+          Due Date
+          <input
+            type="date"
+            id="date"
+            name="date"
+            placeholder="Account Name"
+            value={props.date}
+            onChange={props.handleChange}
+            required
+          />
+        </label>
+        <label htmlFor="date">
+          IF UNPAID IN :
+          <input
+            type="number"
+            id="number"
+            name="date"
+            placeholder="2"
+            value={props.date}
+            onChange={props.handleChange}
+            required
+          />
+        </label>
+
+        <SetPeriod selected={period} setSelected={setPeriod} />
 
         <input
           type="date"

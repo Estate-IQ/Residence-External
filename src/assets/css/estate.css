@@ -67,6 +67,11 @@ body {
   }
 }
 
+.invoiceFor {
+  background: url("../images/receiptBoard.png") no-repeat;
+  background-size: cover;
+}
+
 .handleNavbar {
   font-family: var(--Satoshi) !important;
 }
@@ -5029,17 +5034,6 @@ OVERVIEW
 
 .group_profile .c_del {
   width: 50%;
-}
-
-.group_profile .c_del button {
-  border: 2px solid crimson;
-  color: crimson;
-  padding: 8px 12px;
-}
-
-.group_profile .c_del button:hover {
-  background-color: crimson;
-  color: white;
 }
 
 .group_profile .Cap_estate_name .contact_info {

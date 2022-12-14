@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { PopupButton } from "react-calendly";
 import { Images } from "../../assets/images/Images";
 import { HashLink } from "react-router-hash-link";
 
@@ -12,6 +13,7 @@ const TopNav = () => {
       ? setOpen("houseForTwo active")
       : setOpen("houseForTwo");
   };
+
   return (
     // <BrowserRouter>
     <Navbar>
@@ -38,12 +40,13 @@ const TopNav = () => {
                     {/* <li>Our Partners</li> */}
                   </ul>
                 </li>
-                <HashLink to="/#Benefits" smooth>
-                  <li>Benefits</li>
-                </HashLink>
                 <HashLink to="/#Features" smooth>
                   <li>Features</li>
                 </HashLink>
+                <HashLink to="/#Benefits" smooth>
+                  <li>Benefits</li>
+                </HashLink>
+
                 <Link to="/contact">
                   <li>Contact Us</li>
                 </Link>
@@ -53,7 +56,18 @@ const TopNav = () => {
                 <Link to="/login">
                   <button className="outlined-btn">Sign In</button>
                 </Link>
-                <button className="scheduleButton">Schedule Demo</button>
+                {/* <button > */}
+                <PopupButton
+                  className="scheduleButton"
+                  url="https://calendly.com/estateiqnigeria/30min"
+                  /*
+                   * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                   * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                   */
+                  rootElement={document.getElementById("root")}
+                  text=" Schedule Demo"
+                />
+                {/* </button> */}
               </div>
             </div>
             <div class="menu-wrap" onClick={HandleMenu}>

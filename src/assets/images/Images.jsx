@@ -13,6 +13,8 @@ export const Images = {
   chartFrame: require("../images/chartFrame.png"),
   img6: require("../images/img6.jpg"),
   blog1: require("../images/blog1.jpg"),
+  receiptBoard: require("../images/receiptBoard.png"),
+  owosakin: require("../images/Owosakin.png"),
   communityuse: require("../images/community.png"),
   estateDev: require("../images/estateDev.png"),
   selfManaged: require("../images/selfManaged.png"),

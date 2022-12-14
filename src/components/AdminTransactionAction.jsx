@@ -43,7 +43,6 @@ const SettingUpTransactionDecisions = () => {
         </div>
         {isActive && (
           <div className="select_content">
-            {/* Advert */}
             <div
               className="select_items"
               onClick={(e) => {
@@ -53,7 +52,7 @@ const SettingUpTransactionDecisions = () => {
             >
               <p onClick={() => setnewPenalty(true)}>Create Penalities</p>
             </div>
-            {/* Announcement */}
+
             <div
               className="select_items"
               onClick={(e) => {
@@ -74,10 +73,6 @@ const SettingUpTransactionDecisions = () => {
    */
   const Collection = ({ selected, setSelected }) => {
     const [isActive, setIsActive] = useState(false);
-
-    const [board, setboardMember] = useState(false);
-
-    const options = ["Last 7days", "Last 14 days", "This month", "This year"];
     return (
       <div className="select_me with_blue">
         <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>

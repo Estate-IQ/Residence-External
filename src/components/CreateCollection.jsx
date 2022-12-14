@@ -45,24 +45,6 @@ class CreateCollection extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { email, bank, firstName, password, state } = this.state;
-    // alert(`Your registration detail: \n
-    // Email: ${email} \n
-    // Username: ${firstName} \n
-    // Username:  ${state} \n
-    // Password: ${password}\n
-    // `);
-    Swal.fire({
-      title: `You just created a new estate you named <h1>${bank}</h1>Email has been sent to  <h4> ${email} </h4></div>`,
-      icon: "success",
-      showConfirmButton: true,
-      showCloseButton: true,
-    });
-
-    // useNavigate("/profile", { replace: true });
-
-    // .then(function () {
-    //   window.location = "/Test/profile";
-    // });
   };
 
   _next = () => {

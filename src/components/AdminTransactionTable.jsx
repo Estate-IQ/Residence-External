@@ -37,7 +37,7 @@ const AdminTransactionTable = (props) => {
     .slice(pagesVisited, pagesVisited + eventsPerPage)
     .map((row, index) => {
       return (
-        <tr className="transaction-row">
+        <tr className="transaction-row" key={index}>
           <td className="checkmarking">
             {/* CUSTOM CHECKBOX */}
             <div class="cntr">

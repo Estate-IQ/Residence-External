@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const AccountType = ({ selected, setSelected }) => {
+const SetPeriod = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ["Resident", "Staff", "Others"];
+  const options = ["Month", "Week", "Year"];
   return (
     <div className="select_me filter_drop">
       <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
@@ -43,4 +43,4 @@ const AccountType = ({ selected, setSelected }) => {
   );
 };
 
-export default AccountType;
+export default SetPeriod;

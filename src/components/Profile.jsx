@@ -8,10 +8,34 @@ import GNavbar from "./Navbar/S-Navigator";
 import Mobile from "../components/Navbar/Navbar";
 import TopNav from "../components/Navbar/SuperAdminNav";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Invoices from "./AdminTransactionInvoice";
 
 const Profile = () => {
   // SEARCH INPUT
   // const [searchInput, setSearchInput] = useState("");
+  const [isActive, setIsActive] = useState(false);
+  const [invoice, setInvoice] = useState(false);
+
+  const handleClick = () => {
+    // If the user is currently active, deactivate them
+    if (isActive) {
+      deactivateUser();
+    } else {
+      // Otherwise, activate them
+      activateUser();
+    }
+
+    // Update the state to reflect the change
+    setIsActive(!isActive);
+  };
+  function activateUser() {
+    // TODO: Implement this function to activate the user in the database
+  }
+
+  function deactivateUser() {
+    // TODO: Implement this function to deactivate the user in the database
+  }
   return (
     <>
       <section className="change_ratio">
@@ -22,7 +46,7 @@ const Profile = () => {
         WITH SEARCHBOX
         =========== */}
           <TopNav />
-
+          <Invoices open={invoice} onClose={() => setInvoice(false)} />
           {/* Dashboard - container */}
           <div className="dashboard_container">
             <BreadCrumb
@@ -51,7 +75,9 @@ const Profile = () => {
 
                     <div className="activity_log">
                       <Link to="/superadmin/activitylog">Activity Log</Link>
-                      <Link to="/superadmin/activitylog">Invoice</Link>
+                      {/* <Link to="#" onClick={() => setInvoice(true)}>
+                        Invoice
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -146,7 +172,20 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                <button className="outlined-btn">Deactivate Account</button>
+
+                <StyledButton
+                  onClick={handleClick}
+                  color={isActive ? "crimson" : "white"}
+                  border={isActive ? "2px solid crimson" : "2px solid green"}
+                  background={isActive ? "white" : "green"}
+                >
+                  {isActive ? "Deactivated" : "Activated"}
+                </StyledButton>
+                <p>
+                  <b>Note:</b> Kindly note that upon deactivating,the estate is
+                  not going to function anymore.
+                </p>
+                {/* <button className="outlined-btn">Deactivate Account</button> */}
               </div>
             </div>
           </div>
@@ -157,3 +196,11 @@ const Profile = () => {
 };
 
 export default Profile;
+
+const StyledButton = styled.button`
+  color: ${(props) => props.color};
+  border: ${(props) => props.border};
+  background: ${(props) => props.background};
+  padding: 8px 12px;
+  transition: all 0.2s;
+`;

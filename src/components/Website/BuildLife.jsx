@@ -5,8 +5,8 @@ import { Images } from "../../assets/images/Images";
 const BuildLife = () => {
   return (
     <LifeEasier className="webContainer">
-      <h2>Built to make your life easier</h2>
-      <p>ENHANCING SECURITY, CONVENIENCE AND COMMUNICATION</p>
+      <h2>ENHANCING COMMUNICATION, CONVENIENCE AND SECURITY</h2>
+      {/* <p>ENHANCING COMMUNICATION, CONVENIENCE AND SECURITY</p> */}
 
       <div className="threeImages">
         <img src={Images.selfManaged} alt="" />
@@ -21,7 +21,7 @@ export default BuildLife;
 
 let LifeEasier = styled.section`
   h2 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 50px;
     letter-spacing: -0.03em;

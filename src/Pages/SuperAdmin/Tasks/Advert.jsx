@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { SVGs } from "../../../assets/svg/SVGs";
+import Search from "../../../components/SearchMultiple";
 
 class MasterForm extends React.Component {
   constructor(props) {
@@ -170,6 +171,10 @@ function Step2(props) {
   if (props.currentStep !== 2) {
     return null;
   }
+  const hookresult = ["Golden Gate", "Banana Island", "Dolphin Estate"];
+  const handleResultClick = (result) => {
+    // Handle the selected result here
+  };
   return (
     <div className="form-group">
       <div className="create_est ">
@@ -177,6 +182,12 @@ function Step2(props) {
           <h1>Advert</h1>
           <h4>Advert Info</h4>
         </div>
+        <Search
+          hookresult={hookresult}
+          onResultClick={handleResultClick}
+          // placeholder="Recipients"
+          // onSubmit={handleSubmit}
+        />
 
         <input
           type="email"
@@ -207,33 +218,6 @@ function Step2(props) {
     </div>
   );
 }
-
-const returnSuccessMessage = ({ open, onClose }) => {
-  // if (!open) return null;
-  return (
-    <div onClick={onClose} className="bills_on_me">
-      {/* ===========
-      SUCESS MESSAGE
-      ============== */}
-      <div
-        className="success_message slide-in-top"
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-      >
-        <p>
-          Your have successfully added a new Estate.
-          <span>You can check your Estate list to see them</span>
-        </p>
-        <Link to="/profile">
-          <button onClick={onClose} className="important-btn">
-            View
-          </button>
-        </Link>
-      </div>
-    </div>
-  );
-};
 
 const Modal = ({ open, onClose }) => {
   if (!open) return null;

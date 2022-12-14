@@ -12,7 +12,7 @@ const Footer = () => {
       <section className="webContainer handleFooter">
         <ul>
           <h5>Website</h5>
-          <Link>
+          <Link to="/about">
             <li>About Us </li>
           </Link>
           <Link>
@@ -21,7 +21,7 @@ const Footer = () => {
           <Link>
             <li>Benefits </li>
           </Link>
-          <Link>
+          <Link to="/contact">
             <li>Contact Us </li>
           </Link>
         </ul>
@@ -34,21 +34,21 @@ const Footer = () => {
           <Link>
             <li>WhatsApp</li>
           </Link>
-          <Link>
+          <a href="mailto: estateiqnigeria@gmail.com">
             <li>Email</li>
-          </Link>
+          </a>
         </ul>
         <ul>
           <h5>Social Media</h5>
-          <Link>
+          <a href="https://www.facebook.com/Estateiq-108416158522886">
             <li>Facebook</li>
-          </Link>
-          <Link>
+          </a>
+          <a href="https://www.instagram.com/estateiq_ng/">
             <li>Instagram</li>
-          </Link>
-          <Link>
+          </a>
+          <a href="https://twitter.com/estateiq_ng">
             <li>Twitter</li>
-          </Link>
+          </a>
         </ul>
         <ul className="downloadUsing">
           <h5>Download App</h5>
@@ -68,7 +68,7 @@ const Footer = () => {
       </section>
 
       <div className="copyright">
-        <span className="container">
+        <span>
           Copyright (c) {getCurrentYear()} EstateIQ - All rights reserved
         </span>
       </div>

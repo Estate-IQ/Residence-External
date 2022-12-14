@@ -35,11 +35,11 @@ const TheTeam = () => {
               <p>People Matters</p>
             </div>
           </div>
-          {/* <div className="eachTeam">
-            <img src={Images.img3} alt="" />
+          <div className="eachTeam">
+            <img src={Images.owosakin} alt="" />
             <div className="nameBank">
-              <h4>Makinde Sodiq Abiodun</h4>
-              <p>Web Designer</p>
+              <h4>Babajide Owosakin</h4>
+              <p>Technology</p>
             </div>
           </div>
           <div className="eachTeam">
@@ -55,7 +55,7 @@ const TheTeam = () => {
               <h4>Makinde Sodiq Abiodun</h4>
               <p>Web Designer</p>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </Teams>

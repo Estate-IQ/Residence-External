@@ -21,7 +21,7 @@ const Banner = () => {
             <Link to="/get-started">
               <button className="important-btn">Get Started</button>
             </Link>
-            <button className="outlined-btn">Schedule Demo</button>
+            <button className="outlined-btn">Get the App</button>
           </div>
         </div>
 

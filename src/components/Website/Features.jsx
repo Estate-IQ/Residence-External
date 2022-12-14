@@ -7,9 +7,10 @@ const Features = () => {
   return (
     <PageFeatures className="webContainer">
       <div className="headingB ">
-        <p id="Features">Features</p>
+        <p id="Features">FEATURES</p>
         <h3>
-          The <span> Complete Toolset</span> For Your <span>Community</span>
+          A secured platform for gated communities
+          {/* The <span> Complete Toolset</span> For Your <span>Community</span> */}
         </h3>
       </div>
 
@@ -17,18 +18,18 @@ const Features = () => {
         {/* Section ! */}
         <div className="fSection">
           <div className="eachFea">
-            <h4>Safety and Security</h4>
+            <h4>Access Control</h4>
             <p>
-              Security is among the most notable considerations when people opt
-              for gated communities. Estate managers can support and strengthen
-              their security architecture with EstateIQ.
+              EstateIQ offers a secure, convenient, flexible way of controlling
+              who has access to your building and when access is allowed.
             </p>
           </div>
           <div className="eachFea">
-            <h4>Estate Secretariat/Board </h4>
+            <h4>Billing and Payment System</h4>
             <p>
-              The estate office can enhance productivity and ensure
-              effectiveness in communications with residents and vendors.
+              Collection of fees and dues are critical to maintaining
+              infrastructure. EstateIQ makes payments convenient, and
+              collections seamless.
             </p>
           </div>
         </div>
@@ -49,18 +50,18 @@ const Features = () => {
             </p>
           </div>
           <div className="eachFea">
-            <h4>Access Control</h4>
+            <h4>Safety and Security</h4>
             <p>
-              EstateIQ offers a secure, convenient, flexible way of controlling
-              who has access to your building and when access is allowed.
+              Security is among the most notable considerations when people opt
+              for gated communities. Estate managers can support and strengthen
+              their security architecture with EstateIQ.
             </p>
           </div>
           <div className="eachFea">
-            <h4>Billing and Payment System</h4>
+            <h4>Estate Secretariat/Board </h4>
             <p>
-              Collection of fees and dues are critical to maintaining
-              infrastructure. EstateIQ makes payments convenient, and
-              collections seamless.
+              The estate office can enhance productivity and ensure
+              effectiveness in communications with residents and vendors.
             </p>
           </div>
         </div>
@@ -118,6 +119,7 @@ let PageFeatures = styled.section`
     }
     .eachFea {
       margin: 25px 0;
+      margin-bottom: 40px;
       h4 {
         font-size: 22px;
         font-weight: 700;

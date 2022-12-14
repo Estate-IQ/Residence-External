@@ -32,7 +32,7 @@ let HandleInvoices = styled.section`
     padding: 20px;
     margin: 100px auto;
     .invoiceFor {
-      background: #5376e5;
+      // background: #5376e5;
       border-radius: 5px 5px 0px 0px;
       padding: 10px;
       display: flex;

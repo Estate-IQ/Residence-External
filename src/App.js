@@ -6,7 +6,7 @@ import "./assets/css/estate.css";
 // AUTH
 import ChooseMode from "./Pages/Authentication/ChooseMode";
 import Login from "./components/Login";
-import Test from "./Test/Test";
+import Test from "./Test/UseCase";
 import JoinEstate from "./Pages/Authentication/JoinEstate";
 import CreateEstate from "./Pages/Authentication/CreateEstate";
 // Messages

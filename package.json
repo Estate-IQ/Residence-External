@@ -10,6 +10,7 @@
     "jspdf": "^2.5.1",
     "jspdf-html2canvas": "^1.4.9",
     "react": "^18.2.0",
+    "react-calendly": "^4.1.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.1.4",
     "react-pdf": "^6.2.0",

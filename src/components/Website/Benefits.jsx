@@ -9,7 +9,7 @@ const Benefits = () => {
       <div className="handleDisplay">
         <img src={Images.Enable} alt="Benefits" className="ff_part" />
         <div className="benefits">
-          <p>Benefits</p>
+          <p>BENEFITS</p>
           <h3>Enable your Community Enjoy these...</h3>
         </div>
       </div>
@@ -43,6 +43,18 @@ const Benefits = () => {
               strategic needs and reduce costs via cloud based IT services. Our
               certified support personnel fully manage the underlying cloud and
               security infrastructure.
+            </p>
+          </div>
+          <div className="eachBenefits">
+            <h4>Additional Layer of Convenience</h4>
+
+            <p>
+              There is absolutely nothing stopping you from enjoying an
+              additional layer of convenience, with our integrative & intuitive
+              solution (EstateIQ) you can enjoy a great deal of convenience. You
+              have worked hard, and you deserve as much of the convenience we
+              offer, like cutting down waiting times and minimizing human
+              errors.
             </p>
           </div>
 
