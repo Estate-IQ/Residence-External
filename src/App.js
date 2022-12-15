@@ -24,6 +24,7 @@ import ContactUs from "./Pages/Website/Contact";
 import ResidentComplain from "./Pages/Residents/ResidentComplain";
 import ResidentTransaction from "./Pages/Residents/Transaction";
 import ResidentActivityLog from "./Pages/Residents/ActivityLog";
+import Payment from "./Pages/Residents/Payment";
 import Residents from "./Pages/Residents/Residents";
 import ResidentsOverview from "./Pages/Residents/Dashboard";
 import Redirect from "./Pages/Residents/RedirectHome";
@@ -101,6 +102,7 @@ function App() {
 
             {/* RESIDENT */}
             <Route path="/Residents" element={<ResidentsOverview />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="/Residents/settings" element={<RedirectSettings />} />
             <Route path="/redirect=token" element={<Redirect />} />
             <Route path="/resident/complaint" element={<ResidentComplain />} />

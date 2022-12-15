@@ -8,6 +8,7 @@ import GNavbar from "../../components/Navbar/A-Navigator";
 import Mobile from "../../components/Navbar/AdminMobile";
 import TopNav from "../../components/Navbar/AdminNav";
 import { SVGs } from "../../assets/svg/SVGs";
+import CreateEstateZone from "../../components/CreateZone";
 
 function AdminResidents() {
   const [events, setEvents] = useState(API.slice(0, 20));
@@ -17,6 +18,7 @@ function AdminResidents() {
   const [searchTerm, setSearchTerm] = useState("");
   const [openModal, setOpenModal] = useState(false); // state for Modal
   const [board, setBoardMember] = useState(false); // state for Modal
+  const [zone, setZone] = useState(false); // state for Modal
   const [selected, setSelected] = useState("Filter");
   const [activeIndex, setActiveIndex] = useState(1);
   const handleClick = (index) => setActiveIndex(index);
@@ -147,7 +149,17 @@ function AdminResidents() {
                 setIsActive(false);
               }}
             >
-              <p onClick={() => setBoardMember(true)}>Add Board Member</p>
+              <p onClick={() => setBoardMember(true)}>Board Member</p>
+            </div>
+            {/* Add Board Member */}
+            <div
+              className="select_items"
+              onClick={(e) => {
+                setSelected("Board Member");
+                setIsActive(false);
+              }}
+            >
+              <p onClick={() => setZone(true)}>Enable Setup</p>
             </div>
           </div>
         )}
@@ -161,6 +173,7 @@ function AdminResidents() {
         <Mobile />
         <AddNewResidents open={openModal} onClose={() => setOpenModal(false)} />
         <AddBoardMember open={board} onClose={() => setBoardMember(false)} />
+        <CreateEstateZone open={zone} onClose={() => setZone(false)} />
         <div className="selected_tab">
           <TopNav />
           <div className="dashboard_container">

@@ -2,76 +2,135 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const MultiStepForm = () => {
+  // State to keep track of the current step
   const [currentStep, setCurrentStep] = useState(1);
-  // Add a constant to store the total number of steps in the form
-  const totalSteps = 2;
-  const handleNext = () => {
-    setCurrentStep(currentStep + 1);
-    // handleSubmit();
+
+  // State to keep track of the form data
+  const [formData, setFormData] = useState({});
+
+  // Helper function to handle form field changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
-  const handlePrev = () => {
-    setCurrentStep(currentStep - 1);
+  // Helper function to handle moving to the next step
+  const handleNext = () => {
+    setCurrentStep((prevCurrentStep) => prevCurrentStep + 1);
   };
+
+  // Helper function to handle moving to the previous step
+  const handlePrev = () => {
+    setCurrentStep((prevCurrentStep) => prevCurrentStep - 1);
+  };
+
+  // Helper function to handle submitting the form
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    console.log(data); // Log all input
-    fetch("/api/submit", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-  };
-
-  const renderStepFields = () => {
-    switch (currentStep) {
-      case 1:
-        return (
-          <>
-            <input type="text" placeholder="FIrst Name" />
-
-            <input type="text" placeholder="Last Name" />
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <label>Step 2 Field 1:</label>
-            <input type="text" />
-            <label>Step 2 Field 2:</label>
-            <input type="text" />
-          </>
-        );
-      default:
-        return null;
-    }
+    // Submit the form data here...
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
-      {renderStepFields()}
-      {currentStep > 1 && (
-        <button type="button" onClick={handlePrev}>
-          Previous
-        </button>
+    <form onSubmit={handleSubmit}>
+      {currentStep === 1 && (
+        <>
+          {/* Step 1 form fields go here */}
+          <input
+            type="text"
+            name="field1"
+            value={formData.field1}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="field2"
+            value={formData.field2}
+            onChange={handleChange}
+          />
+
+          <button type="button" onClick={handleNext}>
+            Next
+          </button>
+        </>
       )}
-      {currentStep < totalSteps ? (
-        <button type="button" onClick={handleNext}>
-          Next
-        </button>
-      ) : (
-        // Only render the Submit button on the last step
-        <button type="submit">Submit</button>
+
+      {currentStep === 2 && (
+        <>
+          {/* Step 2 form fields go here */}
+          <input
+            type="text"
+            name="field3"
+            value={formData.field3}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="field4"
+            value={formData.field4}
+            onChange={handleChange}
+          />
+
+          <button type="button" onClick={handlePrev}>
+            Previous
+          </button>
+          <button type="button" onClick={handleNext}>
+            Next
+          </button>
+        </>
       )}
-    </StyledForm>
+
+      {currentStep === 3 && (
+        <>
+          {/* Step 3 form fields go here */}
+          <input
+            type="text"
+            name="field5"
+            value={formData.field5}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="field6"
+            value={formData.field6}
+            onChange={handleChange}
+          />
+
+          <button type="button" onClick={handlePrev}>
+            Previous
+          </button>
+          <button type="submit">Submit</button>
+        </>
+      )}
+    </form>
   );
 };
 
-export default MultiStepForm;
+const CreateEstateZone = ({ open, onClose }) => {
+  if (!open) return null;
+  return (
+    <HandleZoneModal onClick={onClose} className="bills_on_me">
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className="modalContainer"
+      >
+        <MultiStepForm />
+        <img
+          src="https://www.svgrepo.com/show/311932/close.svg"
+          alt=""
+          onClick={onClose}
+        />
+      </div>
+    </HandleZoneModal>
+  );
+};
+export default CreateEstateZone;
 
-const StyledForm = styled.form`
+const HandleZoneModal = styled.section`
   padding: 16px;
   background-color: #eee;
 `;

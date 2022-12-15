@@ -57,6 +57,26 @@ let LifeEasier = styled.section`
       margin: 20px 0;
     }
 
+    .managed {
+      position: relative;
+      .compromised {
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 24px;
+          color: #f2f6ff;
+          text-align: center;
+        }
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 20px;
+      }
+      img {
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
     @media (min-width: 608px) {
       display: flex;
       justify-content: space-between;

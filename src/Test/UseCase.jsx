@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "./MultipleSearch";
 import FrequencySelect from "./SelectOption";
+import MultiStep from "./MultiStep";
 
 const options = [
   { value: "daily", label: "Daily" },
@@ -57,6 +58,7 @@ const ParentComponent = () => {
   // };
   return (
     <form onSubmit={handleSubmit}>
+      <MultiStep />
       {/* Other form fields... */}
       <input
         type="text"
