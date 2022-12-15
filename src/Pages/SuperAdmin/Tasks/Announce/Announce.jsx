@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { SVGs } from "../../../../assets/svg/SVGs";
+import Search from "../../../../components/SearchMultiple";
 
 const Modal = ({ open, onClose }) => {
   const handleSubmit = (e) => {
@@ -13,6 +14,10 @@ const Modal = ({ open, onClose }) => {
     e.preventDefault();
   };
   if (!open) return null;
+  const hookresult = ["Adepitan", "Onanuga", "Dolphin Estate", "Banana"];
+  const handleResultClick = (result) => {
+    // Handle the selected result here
+  };
   return (
     <div onClick={onClose} className="bills_on_me">
       <div
@@ -50,6 +55,12 @@ const Modal = ({ open, onClose }) => {
             ></textarea>
             <input type="date" id="date" name="date" />
             <input type="time" id="time" name="time" />
+            <Search
+              hookresult={hookresult}
+              onResultClick={handleResultClick}
+              // placeholder="Recipients"
+              // onSubmit={handleSubmit}
+            />
           </div>
           <button>Publish</button>
         </form>

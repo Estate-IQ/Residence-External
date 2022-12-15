@@ -6,6 +6,7 @@ import GNavbar from "../../../components/Navbar/S-Navigator";
 import Mobile from "../../../components/Navbar/Navbar";
 import PermitedServices from "../../../components/SetPermission";
 import styled from "styled-components";
+import Checkbox from "../../../components/Checkboxes";
 
 /** ===Handle form Submission
  * PreventDefault(e)
@@ -65,8 +66,12 @@ const EditEachPackage = () => {
                     <input type="text" placeholder="Free" />
                   </label>
                   <label htmlFor="">
-                    Preferred Payment Method
-                    <Payment selected={selected} setSelected={setSelected} />
+                    <div className="paymentChecks">
+                      <p>Current Payment Methods</p>
+                      <Checkbox id="bank" label="Bank Transfer" />
+                      <Checkbox id="paystack" label="Paystack" />
+                      <Checkbox id="flutterwave" label="Flutterwave" />
+                    </div>
                   </label>
                 </div>
                 <div className="sax">

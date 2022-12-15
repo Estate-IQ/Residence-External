@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { PopupButton } from "react-calendly";
 import { Images } from "../../assets/images/Images";
 import { HashLink } from "react-router-hash-link";
+// import { createHashHistory } from "react-router-dom";
+
+// import { useHistory } from "react-router-dom";
 
 const TopNav = () => {
   const [open, setOpen] = useState("houseForTwo");
@@ -13,6 +16,8 @@ const TopNav = () => {
       ? setOpen("houseForTwo active")
       : setOpen("houseForTwo");
   };
+  // const hashHistory = createHashHistory();
+  // hashHistory.push("/section1");
 
   return (
     // <BrowserRouter>
@@ -31,7 +36,7 @@ const TopNav = () => {
                     <Link to="/about">
                       <li>Who We are</li>
                     </Link>
-                    <HashLink to="/#Team" smooth>
+                    <HashLink to="/about#Team" smooth>
                       <li>Our Team </li>
                     </HashLink>
 
@@ -43,7 +48,15 @@ const TopNav = () => {
                 <HashLink to="/#Features" smooth>
                   <li>Features</li>
                 </HashLink>
-                <HashLink to="/#Benefits" smooth>
+                <HashLink
+                  to="/#Benefits"
+                  smooth
+                  // onClick={() => {
+                  //   const element = document.getElementById("Benefits");
+                  //   element.scrollIntoView();
+                  // }}
+                  // onClick={() => handleClick(section1Ref)}
+                >
                   <li>Benefits</li>
                 </HashLink>
 

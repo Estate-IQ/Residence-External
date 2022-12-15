@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { SVGs } from "../../../assets/svg/SVGs";
+import Search from "../../../components/SearchMultiple";
 
 class MasterForm extends React.Component {
   constructor(props) {
@@ -111,6 +112,10 @@ function Step1(props) {
   if (props.currentStep !== 1) {
     return null;
   }
+  const hookresult = ["Golden Gate", "Banana Island", "Dolphin Estate"];
+  const handleResultClick = (result) => {
+    // Handle the selected result here
+  };
   return (
     <div className="form-group">
       {/* <label htmlFor="title">Email address</label> */}
@@ -151,6 +156,12 @@ function Step1(props) {
           value={props.time}
           onChange={props.handleChange}
           name="time"
+        />
+        <Search
+          hookresult={hookresult}
+          onResultClick={handleResultClick}
+          // placeholder="Recipients"
+          // onSubmit={handleSubmit}
         />
       </div>
       <button>Create Reminder</button>

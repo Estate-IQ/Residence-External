@@ -47,7 +47,9 @@ const Search = ({ hookresult, onSubmit, onResultClick, props }) => {
       <div className="gaugeResults">
         {results.map((result) => (
           <div key={result} className="eachResult">
-            {result}
+            <div className="rendered">
+              <h2>{result}</h2>
+            </div>
             <p onClick={() => handleRemoveResult(result)}>x</p>
           </div>
         ))}
@@ -86,12 +88,27 @@ let HandleMultipleSearch = styled.section`
       height: 40px;
       padding: 10px;
       align-items: center;
-      border: 1px solid #999999;
       background: #f2f6ff;
+      margin-bottom: 15px;
+      h2 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 19px;
+        margin-top: 3px;
+        margin-left: 30px;
+        line-height: 18px;
+        letter-spacing: -0.06em;
+        color: #545454;
+      }
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+      border: 1px solid #2d4bf3;
       border-radius: 5px;
       display: flex;
       justify-content: space-between;
       p {
+        margin-top: 5px;
         cursor: pointer;
         opacity: 0.7;
         font-size: 20px;
@@ -111,6 +128,10 @@ let HandleMultipleSearch = styled.section`
       border-bottom: 1px solid #f3f3f3;
       padding: 5px 10px;
       margin: 0;
+      transition: 0.4s;
+      &:hover {
+        background: #f3f3f3;
+      }
     }
   }
 `;

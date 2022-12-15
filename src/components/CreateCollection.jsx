@@ -5,6 +5,7 @@ import { SVGs } from "../assets/svg/SVGs";
 import Frequency from "./Frequency";
 import CollectionTarget from "./CollectionTarget";
 import States from "./Location";
+import Checkbox from "./Checkboxes";
 // import LGAs from "../../../components/States/State";
 
 class CreateCollection extends React.Component {
@@ -171,6 +172,15 @@ function Step1(props) {
           value={props.date}
           onChange={props.handleChange}
         />
+        <input
+          type="text"
+          id="collectionAmount"
+          name="collectionAmount"
+          placeholder="Collection Amount"
+          readOnly
+          value={props.collectionAmount}
+          onChange={props.handleChange}
+        />
       </div>
     </div>
   );
@@ -185,7 +195,13 @@ function Step2(props) {
       <div className="create_est ">
         <div className="form_txt">
           <h3>Define Collection</h3>
-          <h4>Payment Info</h4>
+          <h4>Payment Methods</h4>
+        </div>
+
+        <div className="paymentChecks">
+          <Checkbox id="bank" label="Bank Account" />
+          <Checkbox id="paystack" label="Paystack" />
+          <Checkbox id="Flutterwave" label="Flutterwave" />
         </div>
         <input
           type="text"
@@ -211,18 +227,13 @@ function Step2(props) {
           placeholder="Account Name"
           value={props.accountName}
           onChange={props.handleChange}
-          required
-        />
-        <input
-          type="text"
-          id="collectionAmount"
-          name="collectionAmount"
-          placeholder="Collection Amount"
-          readOnly
-          value={props.collectionAmount}
-          onChange={props.handleChange}
         />
 
+        <div className="paymentChecks">
+          <p>Allow :</p>
+          <Checkbox id="part" label="Part Payment" />
+          <Checkbox id="full" label="Full Payment" />
+        </div>
         {/* <States handleSearch={props.handleSearch} state={props.state} /> */}
       </div>
       <button

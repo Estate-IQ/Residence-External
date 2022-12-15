@@ -487,7 +487,6 @@ $submit-color-darker: #00824a;
     justify-content: space-between;
     > div {
       margin-left: 20px;
-      margin-right: 20px;
     }
     h3 {
       font-size: 16px;
@@ -873,9 +872,11 @@ OVERVIEW
   right: 0;
   width: 82%;
   height: 100%;
+
   overflow: scroll;
   z-index: 60;
   padding: 0 20px;
+  padding-bottom: 30px;
   background: rgba(0, 0, 0, 0.3);
   // background: rgba(225, 246, 255, 0.3);
 }

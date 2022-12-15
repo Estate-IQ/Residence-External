@@ -210,7 +210,7 @@ function Step1(props) {
   );
 }
 const HandleRamdomId = () => {
-  document.getElementById("emailId").value = generateID(6);
+  document.getElementById("emailId").value = `#${generateID(6)}`;
 };
 function Step2(props) {
   if (props.currentStep !== 2) {
@@ -234,6 +234,15 @@ function Step2(props) {
         />
         <input
           type="text"
+          id="emailId"
+          name="emailId"
+          placeholder="Estate ID"
+          readOnly
+          value={props.emailId}
+          onChange={props.handleChange}
+        />
+        <input
+          type="text"
           id="estate_ads"
           name="estate_ads"
           placeholder="Estate Address"
@@ -248,15 +257,6 @@ function Step2(props) {
           value={props.estateEmail}
           onChange={props.handleChange}
           required
-        />
-        <input
-          type="text"
-          id="emailId"
-          name="emailId"
-          placeholder="Estate ID"
-          readOnly
-          value={props.emailId}
-          onChange={props.handleChange}
         />
 
         <States handleSearch={props.handleSearch} state={props.state} />

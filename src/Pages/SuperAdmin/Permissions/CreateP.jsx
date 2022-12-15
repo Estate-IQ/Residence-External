@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { SVGs } from "../../../assets/svg/SVGs";
+import Checkbox from "../../../components/Checkboxes";
+import Search from "../../../components/SearchMultiple";
 import CardRadio from "../../../components/ToggleCard";
 
 class MasterForm extends React.Component {
@@ -159,12 +161,11 @@ function Step1(props) {
           onChange={props.handleChange}
           name="packageName"
         />
-        <div className="switch-field">
-          <CardRadio
-            title=" Prefered Payment Option"
-            leftLabel="Credit/Debit Card"
-            rightLabel="Bank Transfer"
-          />
+        <div className="paymentChecks">
+          <p>Payment Methods</p>
+          <Checkbox id="bank" label="Bank Transfer" />
+          <Checkbox id="paystack" label="Paystack" />
+          <Checkbox id="flutterwave" label="Flutterwave" />
         </div>
       </div>
     </div>

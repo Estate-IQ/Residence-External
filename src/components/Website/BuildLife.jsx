@@ -9,9 +9,24 @@ const BuildLife = () => {
       {/* <p>ENHANCING COMMUNICATION, CONVENIENCE AND SECURITY</p> */}
 
       <div className="threeImages">
-        <img src={Images.selfManaged} alt="" />
-        <img src={Images.communityuse} alt="" />
-        <img src={Images.estateDev} alt="" />
+        <div className="managed">
+          <img src={Images.selfManaged} alt="" />
+          <div className="compromised">
+            <p>Self Managed </p>
+          </div>
+        </div>
+        <div className="managed">
+          <img src={Images.communityuse} alt="" />
+          <div className="compromised">
+            <p>Community Management</p>
+          </div>
+        </div>
+        <div className="managed">
+          <img src={Images.estateDev} alt="" />
+          <div className="compromised">
+            <p>Real Estate Developer</p>
+          </div>
+        </div>
       </div>
     </LifeEasier>
   );
@@ -46,12 +61,30 @@ let LifeEasier = styled.section`
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      img {
+      .managed {
         width: 48%;
+        position: relative;
+        .compromised {
+          p {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #f2f6ff;
+            text-align: center;
+          }
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          top: 20px;
+        }
+        img {
+          object-fit: cover;
+          border-radius: 10px;
+        }
       }
     }
     @media (min-width: 808px) {
-      img {
+      .managed {
         width: 32%;
       }
     }

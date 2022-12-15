@@ -43,16 +43,9 @@ const TheTeam = () => {
             </div>
           </div>
           <div className="eachTeam">
-            <img src={Images.img4} alt="" />
+            <img src={Images.Makinde} alt="" />
             <div className="nameBank">
-              <h4>Makinde Sodiq Abiodun</h4>
-              <p>Web Designer</p>
-            </div>
-          </div>
-          <div className="eachTeam">
-            <img src={Images.img6} alt="" />
-            <div className="nameBank">
-              <h4>Makinde Sodiq Abiodun</h4>
+              <h4>Sodiq Makinde </h4>
               <p>Web Designer</p>
             </div>
           </div>

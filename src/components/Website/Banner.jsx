@@ -1,9 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
 
 const Banner = () => {
+  const settings = {
+    dots: true,
+    margin: 10,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
   return (
     <PageBanner className="webContainer">
       <section className="pageBanner">
@@ -24,12 +38,25 @@ const Banner = () => {
             <button className="outlined-btn">Get the App</button>
           </div>
         </div>
-
-        <div className="imgBanner">
+        <Slider {...settings} className="handleCarousel imgBanner">
+          {/* <div className=""> */}
           <div className="forTransition">
             <img src={Images.banner} alt="" />
           </div>
-        </div>
+          <div className="forTransition">
+            <img src={Images.banner2} alt="" />
+          </div>
+          <div className="forTransition">
+            <img src={Images.banner3} alt="" />
+          </div>
+          <div className="forTransition">
+            <img
+              src="https://media.istockphoto.com/id/1347495868/photo/smiling-african-american-man-wearing-glasses.jpg?b=1&s=170667a&w=0&k=20&c=CVpXibLIGjpa2_sFFgt_ejrz06ULDMZy0ylqK-VnZRU="
+              alt=""
+            />
+          </div>
+          {/* </div> */}
+        </Slider>
       </section>
     </PageBanner>
   );
@@ -68,6 +95,7 @@ let PageBanner = styled.section`
         object-fit: cover;
         transform: scale(1);
         transition: 1.5s;
+        height: 100%;
         &:hover {
           transform: scale(1.1);
         }

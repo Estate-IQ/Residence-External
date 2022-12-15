@@ -54,25 +54,26 @@ const RightNav = ({ open }) => {
         style={{ position: "relative", height: "95%" }}
       >
         <div className="search_profile">
-          <div className="violet">
-            <div className="user_mode">
-              <img src={Images.img1} alt="" />
-              <div>
-                <h3>Oladokun Moses</h3>
-                <p>Super Admin</p>
+          <Link to="/superadmin/settings">
+            <div className="violet">
+              <div className="user_mode">
+                <img src={Images.img1} alt="" />
+                <div>
+                  <h3>Oladokun Moses</h3>
+                  <p>Super Admin</p>
+                </div>
               </div>
             </div>
-          </div>
-
+          </Link>
           {/* <input type="text" placeholder="Search" /> */}
         </div>
-        <Link to="/">
+        <Link to="/superadmin">
           <li className="before_list over_view">Overview</li>
         </Link>
         <Link to="/superadmin/estate">
           <li className="before_list est">Estates</li>
         </Link>
-        <Link to="" style={{ opacity: "0.4" }}>
+        <Link to="/s-messages">
           <li className="before_list msg">Messages</li>
         </Link>
         <Link to="/superadmin/tasks">
@@ -86,7 +87,7 @@ const RightNav = ({ open }) => {
         </Link>
 
         <div className="loging_out">
-          <Link to="/get-started">
+          <Link to="/login">
             <li className="before_list log_out">Logout</li>
           </Link>
         </div>

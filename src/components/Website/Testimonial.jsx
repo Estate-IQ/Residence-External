@@ -31,14 +31,32 @@ export default class Responsive extends Component {
             <div>
               <PerSlide>
                 <div className="handleImg">
-                  <img src={Images.img5} alt="" />
+                  <img src={Images.baseey} alt="" />
                 </div>
                 <div className="handleText">
-                  <h5>Extraordinarily easy to use product.</h5>
-                  <h6>Obehi Okosun</h6>
+                  <h5>
+                    This is definitely a solution that I will recommend to
+                    forward-looking estate managers and residents.{" "}
+                  </h5>
+                  <h6>Esu Bassey-Duke</h6>
+                  <p>Treasurer, Ogudu GRA Resident Association, Lagos.</p>
+                </div>
+              </PerSlide>
+            </div>
+            <div>
+              <PerSlide>
+                <div className="handleImg">
+                  <img src={Images.pelumi} alt="" />
+                </div>
+                <div className="handleText">
+                  <h5>
+                    It makes communication among residents and with the security
+                    personnel a lot easier for us.
+                  </h5>
+                  <h6>Pelumi Oyedotun</h6>
                   <p>
-                    Managing Director, Cambridge Broadband Network Africa
-                    Limited
+                    Chief Executive Officer, Carnelian Realty Company Limited,
+                    Lagos.{" "}
                   </p>
                 </div>
               </PerSlide>
@@ -46,18 +64,15 @@ export default class Responsive extends Component {
             <div>
               <PerSlide>
                 <div className="handleImg">
-                  <img src={Images.img3} alt="" />
+                  <img src={Images.john} alt="" />
                 </div>
                 <div className="handleText">
                   <h5>
-                    I recommend this for all estates.I found it really easy to
-                    use
+                    We made the right decision by choosing EstateIQ as our
+                    technology partner. They went beyond our expectations.
                   </h5>
-                  <h6>Tosin Alo</h6>
-                  <p>
-                    Managing Director, Cambridge Broadband Network Africa
-                    Limited
-                  </p>
+                  <h6>Akinwunmi John</h6>
+                  <p>Estate Developer – Cravings Parks Estates, Lagos.</p>
                 </div>
               </PerSlide>
             </div>
@@ -114,7 +129,7 @@ let HandleCarousel = styled.section`
       text-align: left;
     }
     h5 {
-      max-width: 350px;
+      max-width: 100%;
       padding-top: 40px;
       font-size: 38px;
       font-weight: 700;

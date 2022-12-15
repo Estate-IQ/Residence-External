@@ -103,12 +103,20 @@ function Step2(props) {
           residentType={props.residentType}
         />
         <input
-          type="text"
+          type="number"
           id="cost"
           value={props.cost}
           onChange={props.handleChange}
           name="cost"
           placeholder="Utility Cost"
+        />
+        <input
+          type="number"
+          id="minimum"
+          value={props.cost}
+          onChange={props.handleChange}
+          name="cost"
+          placeholder="Minimum Purchase"
         />
 
         <input
