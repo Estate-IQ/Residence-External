@@ -2740,9 +2740,48 @@ input:valid {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  #from_mobile {
+  #from_mo e {
     display: none;
   }
+}
+
+.fbook {
+  position: relative;
+  padding-left: 30px;
+}
+
+.fbook::before {
+  content: url("../svg/facebook.svg");
+  position: absolute;
+  left: 0;
+}
+
+.ftwiiter {
+  position: relative;
+  padding-left: 30px;
+}
+
+.ftwiiter::before {
+  content: url("../svg/twitter.svg");
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  left: 0;
+}
+
+.fInstagram {
+  position: relative;
+  padding-left: 30px;
+}
+
+.fInstagram::before {
+  content: url("../svg/instagram.svg");
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  left: 0;
 }
 
 .ghost {
@@ -4046,7 +4085,7 @@ footer ul.breadcrumb li a:hover {
   font-size: 14px;
   background: #ffffff;
   line-height: 20px;
-  padding: 7px 12px;
+  padding: 3px 12px;
   border-radius: 5px;
   position: absolute;
   left: 50px;

@@ -36,10 +36,15 @@ export default class Responsive extends Component {
                 <div className="handleText">
                   <h5>
                     This is definitely a solution that I will recommend to
-                    forward-looking estate managers and residents.{" "}
+                    forward-looking estate managers and residents. I am
+                    particularly interested in the feature that enhances
+                    payments and collections of residency dues, which boosts the
+                    percentage of residents who comply with timely payments of
+                    their dues. With this feature, the number of defaulters will
+                    reduce.
                   </h5>
                   <h6>Esu Bassey-Duke</h6>
-                  <p>Treasurer, Ogudu GRA Resident Association, Lagos.</p>
+                  <p>Treasurer, Ogudu GRA Residents Association, Lagos.</p>
                 </div>
               </PerSlide>
             </div>
@@ -50,7 +55,9 @@ export default class Responsive extends Component {
                 </div>
                 <div className="handleText">
                   <h5>
-                    It makes communication among residents and with the security
+                    Using the app, the experience is great, from the look and
+                    feel to the real solutions that it offers. It makes
+                    communication among residents and with the security
                     personnel a lot easier for us.
                   </h5>
                   <h6>Pelumi Oyedotun</h6>
@@ -68,8 +75,9 @@ export default class Responsive extends Component {
                 </div>
                 <div className="handleText">
                   <h5>
-                    We made the right decision by choosing EstateIQ as our
-                    technology partner. They went beyond our expectations.
+                    Cravings Parks Estates, Lagos. We made the right decision by
+                    choosing EstateIQ as our technology partner. They went
+                    beyond our expectations.
                   </h5>
                   <h6>Akinwunmi John</h6>
                   <p>Estate Developer – Cravings Parks Estates, Lagos.</p>
@@ -131,9 +139,9 @@ let HandleCarousel = styled.section`
     h5 {
       max-width: 100%;
       padding-top: 40px;
-      font-size: 38px;
+      font-size: 25px;
       font-weight: 700;
-      line-height: 49px;
+      line-height: 40px;
       letter-spacing: 0em;
       text-align: left;
     }

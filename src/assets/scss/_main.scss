@@ -2289,8 +2289,43 @@ input:valid {
   .menudrop {
     transform: translate(0);
   }
-  #from_mobile {
+  #from_mo e {
     display: none;
+  }
+}
+.fbook {
+  position: relative;
+  padding-left: 30px;
+  &::before {
+    content: url("../svg/facebook.svg");
+    position: absolute;
+    left: 0;
+  }
+}
+.ftwiiter {
+  position: relative;
+  padding-left: 30px;
+  // display: none;
+  &::before {
+    content: url("../svg/twitter.svg");
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    left: 0;
+  }
+}
+.fInstagram {
+  position: relative;
+  padding-left: 30px;
+  // display: none;
+  &::before {
+    content: url("../svg/instagram.svg");
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    left: 0;
   }
 }
 .ghost {

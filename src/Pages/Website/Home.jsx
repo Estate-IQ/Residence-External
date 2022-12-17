@@ -16,7 +16,6 @@ const Home = () => {
   return (
     <Homepage>
       <TopNav />
-
       <Banner />
       <YellowBg>
         <BuildLife />

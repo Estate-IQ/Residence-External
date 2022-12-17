@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import { Images } from "../../assets/images/Images";
+import { HashLink } from "react-router-hash-link";
 
 const Banner = () => {
   const settings = {
@@ -24,7 +25,7 @@ const Banner = () => {
         <div className="grade">
           <div className="phrase">
             <h1>
-              Living can be a lot <span className="fade-in-bck">simpler</span>{" "}
+              Living can be a lot <span className="fade-in-bck">simpler</span>
               and
               <span className="fade-in-bck"> intuitive</span>
             </h1>
@@ -35,7 +36,9 @@ const Banner = () => {
             <Link to="/get-started">
               <button className="important-btn">Get Started</button>
             </Link>
-            <button className="outlined-btn">Get the App</button>
+            <HashLink to="/#Subscribe">
+              <button className="outlined-btn">Get the App</button>
+            </HashLink>
           </div>
         </div>
         <Slider {...settings} className="handleCarousel imgBanner">
@@ -44,17 +47,18 @@ const Banner = () => {
             <img src={Images.banner} alt="" />
           </div>
           <div className="forTransition">
-            <img src={Images.banner2} alt="" />
-          </div>
-          <div className="forTransition">
-            <img src={Images.banner3} alt="" />
-          </div>
-          <div className="forTransition">
             <img
               src="https://media.istockphoto.com/id/1347495868/photo/smiling-african-american-man-wearing-glasses.jpg?b=1&s=170667a&w=0&k=20&c=CVpXibLIGjpa2_sFFgt_ejrz06ULDMZy0ylqK-VnZRU="
               alt=""
             />
           </div>
+          <div className="forTransition">
+            <img src={Images.banner2} alt="" />
+          </div>
+          {/* <div className="forTransition">
+            <img src={Images.banner3} alt="" />
+          </div> */}
+
           {/* </div> */}
         </Slider>
       </section>
@@ -98,6 +102,11 @@ let PageBanner = styled.section`
         height: 100%;
         &:hover {
           transform: scale(1.1);
+        }
+      }
+      @media (max-width: 420px) {
+        img {
+          max-height: 206px;
         }
       }
       .forTransition {

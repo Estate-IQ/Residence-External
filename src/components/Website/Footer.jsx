@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { SVGs } from "../../assets/svg/SVGs";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   const getCurrentYear = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
             <li>Contact Us </li>
           </Link>
         </ul>
-        <ul>
+        <ul className="Contact">
           <h5>Contact</h5>
 
           <Link>
@@ -37,32 +38,37 @@ const Footer = () => {
           <a href="mailto: estateiqnigeria@gmail.com">
             <li>Email</li>
           </a>
+          <a>
+            <li>
+              21, Olori Muyibat Oyefusi Street, Lekki Phase 1, Lagos, Nigeria.
+            </li>
+          </a>
         </ul>
         <ul>
           <h5>Social Media</h5>
           <a href="https://www.facebook.com/Estateiq-108416158522886">
-            <li>Facebook</li>
+            <li className="fbook">Facebook</li>
           </a>
           <a href="https://www.instagram.com/estateiq_ng/">
-            <li>Instagram</li>
+            <li className="fInstagram">Instagram</li>
           </a>
           <a href="https://twitter.com/estateiq_ng">
-            <li>Twitter</li>
+            <li className="ftwiiter">Twitter</li>
           </a>
         </ul>
         <ul className="downloadUsing">
           <h5>Download App</h5>
           <div className="califa">
-            <Link>
+            <HashLink to="/#Subscribe">
               <li>
                 <img src={SVGs.AppStore} alt="" />
               </li>
-            </Link>
-            <Link>
+            </HashLink>
+            <HashLink to="/#Subscribe">
               <li>
                 <img src={SVGs.GooglePlay} alt="" />
               </li>
-            </Link>
+            </HashLink>
           </div>
         </ul>
       </section>
@@ -81,6 +87,9 @@ export default Footer;
 let PageFooter = styled.section`
   background: #1737e6;
   margin-top: 100px;
+  .Contact {
+    width: 20%;
+  }
   .copyright {
     margin-top: 70px;
     text-align: center;
@@ -101,6 +110,7 @@ let PageFooter = styled.section`
       }
     }
   }
+
   .webContainer {
     max-width: 1210px;
     padding: 0 20px;

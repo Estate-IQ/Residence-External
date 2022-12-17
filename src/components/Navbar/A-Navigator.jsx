@@ -221,4 +221,21 @@ let HandleHeight = styled.div`
       margin-bottom: 50px;
     }
   }
+  .changeAdmin {
+    margin-bottom: 0;
+    img {
+      margin-bottom: 60px !important;
+    }
+  }
+  #option div {
+    padding: 8px;
+    margin-bottom: 12px;
+    h4 {
+      margin-top: 3px;
+      margin-top: 2px;
+    }
+    svg {
+      margin-top: 0px;
+    }
+  }
 `;

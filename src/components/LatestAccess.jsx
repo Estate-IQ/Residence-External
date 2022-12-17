@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
+// import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
 import styled from "styled-components";
 import AccessMode from "./AccessMode";
 

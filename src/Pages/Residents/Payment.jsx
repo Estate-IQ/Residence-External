@@ -7,6 +7,7 @@ import GNavbar from "../../components/Navbar/ResidentNavigator";
 import AllUtilities from "../../components/SetUtilityView";
 import Mobile from "../../components/Navbar/ResidentMobile";
 import TopNav from "../../components/Navbar/ResidentNav";
+import PayDetails from "../../components/PayDetails";
 
 function AdminTransaction() {
   return (
@@ -18,6 +19,9 @@ function AdminTransaction() {
 
         <div className="selected_tab">
           <TopNav />
+          <div className="dashboard_container">
+            <PayDetails />
+          </div>
         </div>
       </section>
     </>

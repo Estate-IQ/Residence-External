@@ -4,7 +4,7 @@ import { Images } from "../../assets/images/Images";
 
 const SubscribeWaitList = () => {
   return (
-    <section className="webContainer">
+    <section className="webContainer" id="Subscribe">
       <WaitList
         onSubmit={(e) => {
           e.preventDefault();
