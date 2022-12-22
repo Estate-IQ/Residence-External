@@ -55,9 +55,9 @@ const Banner = () => {
           <div className="forTransition">
             <img src={Images.banner2} alt="" />
           </div>
-          {/* <div className="forTransition">
-            <img src={Images.banner3} alt="" />
-          </div> */}
+          <div className="forTransition">
+            <img src={Images.banner000} alt="" />
+          </div>
 
           {/* </div> */}
         </Slider>

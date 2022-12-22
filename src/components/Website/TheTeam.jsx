@@ -42,13 +42,13 @@ const TheTeam = () => {
               <p>Technology</p>
             </div>
           </div>
-          <div className="eachTeam">
+          {/* <div className="eachTeam">
             <img src={Images.Makinde} alt="" />
             <div className="nameBank">
               <h4>Sodiq Makinde </h4>
               <p>Web Designer</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Teams>

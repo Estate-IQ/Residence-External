@@ -8,6 +8,7 @@ export const Images = {
   banner: require("../images/banner.jpg"),
   banner2: require("../images/slide2.jpg"),
   banner3: require("../images/banner.png"),
+  banner000: require("../images/banner4.jpg"),
   Makinde: require("../images/Makinde.jpg"),
   oyedotun: require("../images/oyedotun.jpeg"),
   Olaitan: require("../images/olaitan.jpeg"),
